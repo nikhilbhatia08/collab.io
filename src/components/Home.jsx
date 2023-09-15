@@ -8,11 +8,11 @@ function Home() {
   <div class="bg-gradient-to-b from-violet-600/[.15] via-transparent">
     <div class="max-w-[85rem] mx-11 px-4 sm:px-4 lg:px-8 py-24 space-y-8">
       <div class="ml-28 max-w-5xl flex flex-row">
-        <h1 class="font-medium basis-1/2 text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-13xl">
+        <h1 class="block font-medium text-gray-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Welcome to Collab.io the best way to showcase your projects.
         </h1>
         
-        <img className="basis-1/4 ml-56 max-w-[25rem] inline-flex justify-center" src={require('../pictures/projects1.jpg.avif')} alt="" />
+        <img className="get_img w-0 sm:w-0 md:w-32 lg:w-48 ml-60" src={require('../pictures/projects1.jpg.avif')} alt="" />
       </div>
 
       <div class="max-w-3xl text-center mx-auto">
