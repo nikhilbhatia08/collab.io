@@ -12,7 +12,7 @@ function Home() {
           Welcome to Collab.io the best way to showcase your projects.
         </h1>
         
-        <img className="get_img w-0 sm:w-0 md:w-32 lg:w-48 ml-60" src={require('../pictures/projects1.jpg.avif')} alt="" />
+        <img className="get_img w-0 sm:w-0 md:w-32 lg:w-48 ml-60" src={require('../pictures/problem.png')} alt="" />
       </div>
 
       <div class="max-w-3xl pt-5 text-center mx-auto">
