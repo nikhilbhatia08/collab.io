@@ -32,7 +32,7 @@ function Home() {
     <h1 className=" text-gray-200 text-4xl font-bold mx-20 pb-5">Why Collab.io ?</h1>
   </div>
 
-<div class="max-w-[90rem] px-4 sm:px-6 lg:px-8  mx-auto">
+<div class="max-w-[100rem] px-4 sm:px-6 lg:px-8  mx-auto">
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-3 xl:gap-6">
     <a class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all  hover:bg-white/[.075]" href="#">
       <svg class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6  text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -128,7 +128,7 @@ function Home() {
     </a>
   </div>
 </div>
-<div class="max-w-[90rem] bg-gradient-to-b from-slate-900 via-slate-900 to-violet-600/[.19]  px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-[100rem] bg-gradient-to-b from-slate-900 via-slate-900 to-violet-600/[.19]  px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <div class="grid md:grid-cols-2 gap-12">
     <div class="lg:w-3/4">
       <h2 class="text-3xl font-bold lg:text-4xl  text-white">
