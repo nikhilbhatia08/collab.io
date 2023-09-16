@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'; 
 import Login from './components/Login';
+import Getstarted from './components/Getstarted';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/getstarted' element={<Getstarted/>}/>
       </Routes>
     </div>
     </>
