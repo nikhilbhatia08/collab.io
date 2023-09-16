@@ -5,6 +5,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Login from './components/Login';
 import Getstarted from './components/Getstarted';
 import Userdash from './components/Userdash';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/getstarted' element={<Getstarted/>}/>
         <Route path='/user/:userid' element={<Userdash/>}/>
+        <Route path='/projects' element={<Projects/>}/>
       </Routes>
     </div>
     </>
