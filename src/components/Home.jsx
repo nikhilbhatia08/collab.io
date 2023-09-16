@@ -8,7 +8,7 @@ function Home() {
   <div class="bg-gradient-to-b from-violet-600/[.19] via-transparent">
     <div class="max-w-[85rem] mx-11 px-4 sm:px-4 lg:px-8 py-14 space-y-8">
       <div class="ml-28 max-w-5xl flex flex-row">
-        <h1 class="block font-medium text-white text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 class=" block font-medium text-white text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
           Welcome to Collab.io the best way to showcase your projects.
         </h1>
         
@@ -42,7 +42,7 @@ function Home() {
       <div>
         <div>
           <h3 class="block font-bold text-gray-800  text-white">Get Recognition</h3>
-          <p class="text-gray-400">The simplest way to keep your portfolio always up-to-date.</p>
+          <p class="text-gray-400">Gain recognition and visibility by showcasing your projects to a wide audience.</p>
         </div>
 
         <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
@@ -79,8 +79,8 @@ function Home() {
 
       <div>
         <div>
-          <h3 class="block font-bold text-gray-800  text-white">Sell your goods</h3>
-          <p class="text-gray-400">Get your goods in front of millions of potential customers with ease.</p>
+          <h3 class="block font-bold text-gray-800  text-white">Sell your Projects</h3>
+          <p class="text-gray-400">Get your products in front of thousands of potential companies  with ease.</p>
         </div>
 
         <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">

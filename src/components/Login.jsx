@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Login() {
   return (
@@ -19,7 +20,7 @@ function Login() {
         <form>
           <div
             class="flex flex-row items-center justify-center lg:justify-start">
-            <p class="mb-0 mr-4 text-lg">Sign in with</p>
+            <p class="mb-0 mr-4 text-white">Sign in with</p>
 
             <button
               type="button"
@@ -70,7 +71,7 @@ function Login() {
           <div
             class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
             <p
-              class="mx-4 mb-0 text-center font-semibold dark:text-white">
+              class="mx-4 mb-0 text-center font-semibold text-white">
               Or
             </p>
           </div>
@@ -78,12 +79,12 @@ function Login() {
           <div class="relative mb-6" data-te-input-wrapper-init>
             <input
               type="text"
-              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none text-white placeholder:text-white [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="exampleFormControlInput2"
               placeholder="Email address" />
             <label
               for="exampleFormControlInput2"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none text-white peer-focus:text-white"
               >Email address
             </label>
           </div>
@@ -91,12 +92,12 @@ function Login() {
           <div class="relative mb-6" data-te-input-wrapper-init>
             <input
               type="password"
-              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none text-white placeholder:text-white [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
               id="exampleFormControlInput22"
               placeholder="Password" />
             <label
               for="exampleFormControlInput22"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none text-white peer-focus:text-white"
               >Password
             </label>
           </div>
@@ -109,12 +110,12 @@ function Login() {
                 value=""
                 id="exampleCheck2" />
               <label
-                class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                class="inline-block pl-[0.15rem] hover:cursor-pointer text-white"
                 for="exampleCheck2">
                 Remember me
               </label>
             </div>
-            <a href="#!">Forgot password?</a>
+            <Link to="#!" class="text-white">Forgot password?</Link>
           </div>
 
           <div class="text-center lg:text-left">
@@ -125,12 +126,12 @@ function Login() {
               data-te-ripple-color="light">
               Login
             </button>
-            <p class="mb-0 mt-2 pt-1 text-sm font-semibold">
+            <p class="mb-0 mt-2 pt-1 text-white font-semibold">
               Don't have an account?
-              <a
-                href="#!"
-                class="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
-                >Register</a
+              <Link
+                to="#!"
+                class="text-blue-600 text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+                >Register</Link
               >
             </p>
           </div>
