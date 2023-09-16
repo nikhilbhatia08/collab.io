@@ -8,7 +8,7 @@ function Home() {
   <div class="bg-gradient-to-b from-violet-600/[.19] via-transparent">
     <div class="max-w-[85rem] mx-11 px-4 sm:px-4 lg:px-8 py-14 space-y-8">
       <div class="ml-28 max-w-5xl flex flex-row">
-        <h1 class="block font-medium text-gray-200 text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 class="block font-medium text-white text-5xl sm:text-5xl md:text-6xl lg:text-7xl">
           Welcome to Collab.io the best way to showcase your projects.
         </h1>
         
@@ -42,10 +42,10 @@ function Home() {
       <div>
         <div>
           <h3 class="block font-bold text-gray-800  text-white">Get Recognition</h3>
-          <p class="text-gray-600  text-gray-400">The simplest way to keep your portfolio always up-to-date.</p>
+          <p class="text-gray-400">The simplest way to keep your portfolio always up-to-date.</p>
         </div>
 
-        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800  text-gray-200">
+        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
           Learn more
           <svg class="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -61,10 +61,10 @@ function Home() {
       <div>
         <div>
           <h3 class="block font-bold text-gray-800  text-white">Get freelance work</h3>
-          <p class="text-gray-600  text-gray-400">New design projects delivered to your inbox each morning.</p>
+          <p class=" text-gray-400">New design projects delivered to your inbox each morning.</p>
         </div>
 
-        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800  text-gray-200">
+        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
           Learn more
           <svg class="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -80,10 +80,10 @@ function Home() {
       <div>
         <div>
           <h3 class="block font-bold text-gray-800  text-white">Sell your goods</h3>
-          <p class="text-gray-600  text-gray-400">Get your goods in front of millions of potential customers with ease.</p>
+          <p class="text-gray-400">Get your goods in front of millions of potential customers with ease.</p>
         </div>
 
-        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800  text-gray-200">
+        <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
           Learn more
           <svg class="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -97,10 +97,10 @@ function Home() {
       <div>
         <div>
           <h3 class="block font-bold ml-1 text-gray-800  text-white">Compete in Hackathons</h3>
-          <p class="text-gray-600 ml-1  text-gray-400">Get Updates on various events, hackathons and hiring challenges</p>
+          <p class="ml-1  text-gray-400">Get Updates on various events, hackathons and hiring challenges</p>
         </div>
 
-        <p class="mt-3 ml-1 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800  text-gray-200">
+        <p class="mt-3 ml-1 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
           Learn more
           <svg class="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -114,10 +114,10 @@ function Home() {
       <div>
         <div>
           <h3 class="block ml-1 font-bold text-white">Improve your coding skills</h3>
-          <p class="ml-1 text-white">Get mentorship from top mentors in coding and ace coding rounds</p>
+          <p class="ml-1 text-gray-400">Get mentorship from top mentors in coding and ace coding rounds</p>
         </div>
 
-        <p class="mt-3 ml-1 inline-flex items-center gap-x-2 text-sm font-semibold text-white text-white">
+        <p class="mt-3 ml-1 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
           Learn more
           <svg class="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -133,7 +133,7 @@ function Home() {
       <h2 class="text-3xl font-bold lg:text-4xl  text-white">
         Collaborative tools to design better user experience
       </h2>
-      <p class="mt-3 text-white-700">
+      <p class="mt-3 text-gray-400">
         We help businesses bring ideas to life in the digital world, by designing and implementing the technology tools that they need to win.
       </p>
       <p class="mt-5 inline-flex items-center gap-x-2 font-medium shadow-blue-50 text-blue-600  text-blue-500">
@@ -153,10 +153,10 @@ function Home() {
           </svg>
         </span>
         <div class="ml-5 sm:ml-8">
-          <h3 class="text-base sm:text-lg font-semibold text-gray-800  text-gray-200">
+          <h3 class="text-base sm:text-lg font-semibold text-white">
             Industry-leading documentation
           </h3>
-          <p class="mt-1 text-gray-600  text-gray-400">
+          <p class="mt-1 text-gray-400">
             Our documentation and extensive Client libraries contain everything a business needs to build a custom integration in a fraction of the time.
           </p>
         </div>
@@ -169,10 +169,10 @@ function Home() {
           </svg>
         </span>
         <div class="ml-5 sm:ml-8">
-          <h3 class="text-base sm:text-lg font-semibold text-gray-800  text-gray-200">
+          <h3 class="text-base sm:text-lg font-semibold text-white">
             Developer community support
           </h3>
-          <p class="mt-1 text-gray-600  text-gray-400">
+          <p class="mt-1 text-gray-400">
             We actively contribute to open-source projects—giving back to the community through development, patches, and sponsorships.
           </p>
         </div>
@@ -184,10 +184,10 @@ function Home() {
           </svg>
         </span>
         <div class="ml-5 sm:ml-8">
-          <h3 class="text-base sm:text-lg font-semibold text-gray-800  text-gray-200">
+          <h3 class="text-base sm:text-lg font-semibold text-white">
             Simple and affordable
           </h3>
-          <p class="mt-1 text-gray-600  text-gray-400">
+          <p class="mt-1 text-gray-400">
             From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
           </p>
         </div>
