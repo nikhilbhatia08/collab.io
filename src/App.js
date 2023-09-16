@@ -4,6 +4,7 @@ import Home from './components/Home';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'; 
 import Login from './components/Login';
 import Getstarted from './components/Getstarted';
+import Userdash from './components/Userdash';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/getstarted' element={<Getstarted/>}/>
+        <Route path='/user/:userid' element={<Userdash/>}/>
       </Routes>
     </div>
     </>
