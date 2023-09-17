@@ -7,6 +7,7 @@ import Getstarted from './components/Getstarted';
 import Userdash from './components/Userdash';
 import Projects from './components/Projects';
 import Inproj from './components/Inproj';
+import Account from './components/Account';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/getstarted' element={<Getstarted/>}/>
-        <Route path='/user/:userid' element={<Userdash/>}/>
+        <Route path='/user/:userid' element={<Account/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
       </Routes>
