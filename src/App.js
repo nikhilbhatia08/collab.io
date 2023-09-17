@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Getstarted from './components/Getstarted';
 import Userdash from './components/Userdash';
 import Projects from './components/Projects';
+import Inproj from './components/Inproj';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/getstarted' element={<Getstarted/>}/>
         <Route path='/user/:userid' element={<Userdash/>}/>
         <Route path='/projects' element={<Projects/>}/>
+        <Route exact path='/projects/:projectId' element={<Inproj/>}/>
       </Routes>
     </div>
     </>
