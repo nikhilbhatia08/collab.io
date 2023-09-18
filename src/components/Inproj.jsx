@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
+
 function Inproj(props) {
     const  id  = useParams();
     const imgs = ['../pictures/picofdev.png', '../pictures/problem.png'];

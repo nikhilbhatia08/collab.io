@@ -29,9 +29,11 @@ const dummyCont = [
         name: "Varun", 
         id: 3,
     }
-];
-
+];  //this will come from the database and will contain the details of the followers of that user
+ 
 let items = [];
+
+let num = 0;  //to sepparate the duplicate items
 
 function Addproj() {
     const [imglink, setimglink] = useState('');
@@ -105,17 +107,21 @@ function Addproj() {
                                 <div className='flex-col'>
                                     <input type="text" className='text-black border rounded-md px-2 py-1 bg-slate-200 w-[360px]' placeholder='Search'/>
                                     <div className='flex-col'>
-                                        {dummyCont.map((item)=>{
+                                        {dummyCont.map((item, idx)=>{
                                             return <div className='mt-2 flex items-center'>
                                                 <div className='w-12 h-12'>
                                                     <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
                                                 </div>
                                                 <h1 className='text-black mx-2'>{item.name}</h1>
-                                                <button onClick={()=>{if(()=>items.find(item) === undefined){
-                                                    setCont(()=>[...cont, item]);
-                                                    items.push(item);
-                                                    console.log("item added");
-                                                }}} className='bg-blue-500 px-3 text-white rounded-md ml-2'>Add</button>
+                                                <div className='flex-1 flex justify-end'>
+                                                <button onClick={()=>{
+                                                    if((num & (1 << idx + 1)) === 0){
+                                                        setCont(()=>[...cont, item]);
+                                                        items.push(item);
+                                                        num = (num | (1 << (idx + 1)));
+                                                    }
+                                                }} className='bg-blue-500 px-3 w-24 text-white rounded-md'>Add</button>
+                                                </div>
                                             </div>
                                         })}
                                     </div>
@@ -123,15 +129,26 @@ function Addproj() {
                             </Modal>
                         </div>
                     </div>
+                    <div className='flex'>
+                        <div className='flex-col basis-1/4'>
                     {items.map((item)=>{
                         return <div className='mt-2 flex items-center'>
                         <div className='w-12 h-12'>
                             <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
                         </div>
                         <h1 className='text-black mx-2'>{item.name}</h1>
-                        
+                        <div className='flex-1 flex justify-end'>
+                        <button onClick={(e)=>{
+                            e.preventDefault();
+                            setCont(cont.filter((cont)=>cont.id !== item.id));
+                            items = items.filter((cont)=>cont.id !== item.id);
+                            num = (num & ~(1 << item.id));
+                        }} className='text-white px-3 py-1.5 rounded-md bg-red-500'>Remove</button>
+                        </div>
                         </div>
                     })}
+                    </div>
+                    </div>
                 </div>
                 <div className="mt-2 px-3 py-3">
                     <h1 className="border-b text-4xl">Get sponsors For You Project</h1>
