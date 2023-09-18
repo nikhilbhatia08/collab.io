@@ -6,6 +6,8 @@ import Login from './components/Login';
 import Getstarted from './components/Getstarted';
 import Userdash from './components/Userdash';
 import Projects from './components/Projects';
+import GetFreelance from './components/GetFreelance';
+import Addproj from './components/Addproj';
 import Inproj from './components/Inproj';
 import Account from './components/Account';
 

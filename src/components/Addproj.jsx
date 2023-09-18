@@ -63,7 +63,7 @@ function Addproj() {
                     <div className="flex-col">
                         <div className='mt-2 flex'>
                             <h1 className='text-2xl'>Add Contributor : </h1>
-                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Search contributor here '/>
+                            <button className='bg-blue-500 px-3 text-white rounded-md ml-2'>Add Contibutors here</button>
                         </div>
                     </div>
                 </div>
