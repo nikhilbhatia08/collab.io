@@ -10,6 +10,7 @@ import GetFreelance from './components/GetFreelance';
 import Addproj from './components/Addproj';
 import Inproj from './components/Inproj';
 import Account from './components/Account';
+import Insights from './components/Insights';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
+        <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
       </Routes>
     </div>
     </>
