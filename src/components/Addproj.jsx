@@ -1,9 +1,42 @@
 import React from 'react'
 import { useState } from 'react'
+import Modal from 'react-modal'
+
+const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      borderRadius: "10px",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "white",
+      width: 400,
+    },
+  };
+
+const dummyCont = [
+    {
+        name: "Nikhil Bhatia",
+        id: 1,    
+    },
+    {
+        name: "Vignesh",
+        id:2,
+    },
+    {
+        name: "Varun", 
+        id: 3,
+    }
+];
+
+let items = [];
 
 function Addproj() {
     const [imglink, setimglink] = useState('');
     const [cont, setCont] = useState([]);
+    const [open, setOpen] = useState(false);
   return (
     <div className="">
         <div className="mx-10">
@@ -63,9 +96,42 @@ function Addproj() {
                     <div className="flex-col">
                         <div className='mt-2 flex'>
                             <h1 className='text-2xl'>Add Contributor : </h1>
-                            <button className='bg-blue-500 px-3 text-white rounded-md ml-2'>Add Contibutors here</button>
+                            <button onClick={(e)=>{e.preventDefault();setOpen(true)}} className='bg-blue-500 px-3 text-white rounded-md ml-2'>Add Contibutors here</button>
+                            <Modal
+                                isOpen={open}
+                                onRequestClose={() => setOpen(false)}
+                                style={customStyles}
+                            >
+                                <div className='flex-col'>
+                                    <input type="text" className='text-black border rounded-md px-2 py-1 bg-slate-200 w-[360px]' placeholder='Search'/>
+                                    <div className='flex-col'>
+                                        {dummyCont.map((item)=>{
+                                            return <div className='mt-2 flex items-center'>
+                                                <div className='w-12 h-12'>
+                                                    <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
+                                                </div>
+                                                <h1 className='text-black mx-2'>{item.name}</h1>
+                                                <button onClick={()=>{if(()=>items.find(item) === undefined){
+                                                    setCont(()=>[...cont, item]);
+                                                    items.push(item);
+                                                    console.log("item added");
+                                                }}} className='bg-blue-500 px-3 text-white rounded-md ml-2'>Add</button>
+                                            </div>
+                                        })}
+                                    </div>
+                                </div>
+                            </Modal>
                         </div>
                     </div>
+                    {items.map((item)=>{
+                        return <div className='mt-2 flex items-center'>
+                        <div className='w-12 h-12'>
+                            <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
+                        </div>
+                        <h1 className='text-black mx-2'>{item.name}</h1>
+                        
+                        </div>
+                    })}
                 </div>
                 <div className="mt-2 px-3 py-3">
                     <h1 className="border-b text-4xl">Get sponsors For You Project</h1>
