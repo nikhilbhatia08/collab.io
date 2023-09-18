@@ -10,6 +10,7 @@ import GetFreelance from './components/GetFreelance';
 import Addproj from './components/Addproj';
 import Inproj from './components/Inproj';
 import Account from './components/Account';
+import AddCards from './components/AddCards';
 import Insights from './components/Insights';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/user/:userid' element={<Account/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
+        <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
