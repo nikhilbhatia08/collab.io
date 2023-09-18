@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
+
 function Inproj(props) {
     const  id  = useParams();
     const imgs = ['../pictures/picofdev.png', '../pictures/problem.png'];
@@ -43,7 +44,7 @@ function Inproj(props) {
             </div>
             <div className="mx-10 my-5 inline-block self-start basis-1/4 flex-col rounded-lg border bg-slate-800 px-6">
                 <div className="border-b py-4">
-                <div className="flex items-center"><Link to={`/projects/${id.projectId}/contributors`}><h1 className="text-white inline-block my-3 hover:text-blue-500 text-2xl">Contributors</h1></Link><p className="mx-3 text-white rounded-full bg-slate-400 px-2 border">{contributors.length}</p></div>
+                <div className="flex items-center"><Link to={`/projects/${id.projectId}/insights/1`}><h1 className="text-white inline-block my-3 hover:text-blue-500 text-2xl">Contributors</h1></Link><p className="mx-3 text-white rounded-full bg-slate-400 px-2 border">{contributors.length}</p></div>
                 {contributors.map((contributor, idx)=>{
                     return idx<4?<div className="flex-col">
                     <div className="flex my-3 items-center">
