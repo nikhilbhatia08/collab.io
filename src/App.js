@@ -12,6 +12,7 @@ import Inproj from './components/Inproj';
 import Account from './components/Account';
 import AddCards from './components/AddCards';
 import Insights from './components/Insights';
+import About from './components/About';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/getstarted' element={<Getstarted/>}/>
         <Route path='/user/:userid' element={<Account/>}/>
         <Route path='/projects' element={<Projects/>}/>
+        <Route exact path='/About' element={<About/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>

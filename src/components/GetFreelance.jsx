@@ -4,7 +4,15 @@ import AddCards from '../components/AddCards';
 import { Link } from 'react-router-dom'
 
 function Getfreelance() {
-  const[cards , setcards] = useState();
+
+  // const AddCards= (Name , Catg , desc) => {
+  //    const myTodo = {
+  //      Name : Name,
+  //      Catg : Catg,
+  //      desc : desc
+  //    };
+  //    <cards name='name' catg='Catg' desc='desc'/>
+  // }
 
   let val=[1,2,3,4,5,6];
   return (
