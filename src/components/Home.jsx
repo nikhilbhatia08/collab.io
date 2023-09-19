@@ -34,7 +34,7 @@ function Home() {
 
 <div class="max-w-[100rem] px-4 sm:px-6 lg:px-8  mx-auto">
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-3 xl:gap-6">
-    <a class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all  hover:bg-white/[.075]" href="#">
+    <Link  to='AddProj' class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all  hover:bg-white/[.075]" href="#">
       <svg class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6  text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
         <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
         <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"/>
@@ -42,7 +42,7 @@ function Home() {
 
       <div>
         <div>
-          <h3 class="block font-bold text-gray-800  text-white">Get Recognition</h3>
+          <h3 class="block font-bold text-gray-800  text-white">Add Project</h3>
           <p class="text-gray-400">Gain recognition and visibility by showcasing your projects to a wide audience.</p>
         </div>
 
@@ -53,7 +53,7 @@ function Home() {
           </svg>
         </p>
       </div>
-    </a>
+    </Link>
     <Link to='GetFreelance' class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all  hover:bg-white/[.075]" href="#">
       <svg class="flex-shrink-0 w-8 h-8 text-white mt-0.5 mr-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .447.276L8.81 1h4.69A1.5 1.5 0 0 1 15 2.5V11h.5a.5.5 0 0 1 0 1h-2.86l.845 3.379a.5.5 0 0 1-.97.242L12.11 14H3.89l-.405 1.621a.5.5 0 0 1-.97-.242L3.36 12H.5a.5.5 0 0 1 0-1H1V2.5A1.5 1.5 0 0 1 2.5 1h4.691l.362-.724A.5.5 0 0 1 8 0ZM2 11h12V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5V11Zm9.61 1H4.39l-.25 1h7.72l-.25-1Z"/>
@@ -153,6 +153,7 @@ function Home() {
             <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
           </svg>
         </span>
+        <Link to='Document'>
         <div class="ml-5 sm:ml-8">
           <h3 class="text-base sm:text-lg font-semibold text-white">
             Industry-leading documentation
@@ -161,6 +162,7 @@ function Home() {
             Our documentation and extensive Client libraries contain everything a business needs to build a custom integration in a fraction of the time.
           </p>
         </div>
+        </Link>
       </div>
       <div class="flex">
         <span class="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm mx-auto  bg-slate-900  border-gray-700  text-gray-200">
