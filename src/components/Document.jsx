@@ -5,7 +5,7 @@ function Document() {
    let val=[1,2,3,4,5,6,1,2];
   return (
     <>
-      <div className="p-5 px-20">
+      <div className="p-5 px-10">
         <div className="Flex text-center text-white mx-3 my-2 py-2 px-3 w-28 text-red bg-blue-900 rounded-md">
           Featured
         </div>
