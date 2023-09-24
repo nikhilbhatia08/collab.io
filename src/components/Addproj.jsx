@@ -150,7 +150,7 @@ function Addproj() {
                     </div>
                 </div>
                 <div className="mt-2 px-3 py-3">
-                    <h1 className="border-b text-4xl">Get sponsors For You Project</h1>
+                    <h1 className="border-b text-3xl">Get sponsors For You Project</h1>
                     <div>
                         <h1>Add Sponsorship links</h1>
                     </div>

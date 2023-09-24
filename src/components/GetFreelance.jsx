@@ -4,17 +4,23 @@ import AddCards from '../components/AddCards';
 import { Link } from 'react-router-dom'
 
 function Getfreelance() {
-
-  // const AddCards= (Name , Catg , desc) => {
-  //    const myTodo = {
-  //      Name : Name,
-  //      Catg : Catg,
-  //      desc : desc
-  //    };
-  //    <cards name='name' catg='Catg' desc='desc'/>
-  // }
-
-  let val=[1,2,3,4,5,6];
+ 
+  const details=[{
+    Name : "Food Delivery space",
+    category : "Web Development",
+    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+    },
+   {
+    Name : "Food Delivery space",
+    category : "Web Development",
+    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+   },
+   {
+    Name : "Food Delivery space",
+    category : "Web Development",
+    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+  }
+]
   return (
     <div class="bg-slate-750 py-10 sm:py-12">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,13 +36,14 @@ function Getfreelance() {
     <div class="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"> 
 
       {/* card starts from here */}
-      {val.map((node)=>{
+      {/* <AddCards details={details}/> */}
+      {details.map((node)=>{
            return(
              <>
-              <Cards/> 
+              <Cards Name={node.Name} category={node.category} Description={node.Description}/> 
              </>
            )
-       })}
+        })} 
       {/* <!-- More posts... --> */}
     </div>
   </div>

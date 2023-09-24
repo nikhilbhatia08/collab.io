@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function Document() {
-   let val=[1,2,3,4,5,6,1,2];
+   let val=[1,2,3,4,5];
   return (
     <>
       <div className="p-5 px-10">
@@ -13,6 +13,9 @@ function Document() {
           <p className="text-white py-3">Welcome to the professional documentation page. Here, you'll find a comprehensive collection of important documents and resources to support our endeavors. We believe that access to organized and up-to-date documentation is crucial for efficient operations and seamless collaboration.</p>
         </div>       
         <hr />
+
+        {/* sofware */}
+        
         <div className=" text-center font-semibold text-white m-3 py-2 px-3 w-48 text-red bg-green-900 rounded-md">
              Software
         </div>
@@ -32,6 +35,7 @@ function Document() {
         <hr />
 
         {/* hardware component */}
+
         <div className=" text-center font-semibold text-white m-3 py-2 px-3 w-48 text-red bg-green-900 rounded-md">
              Hardware
         </div>
@@ -49,7 +53,9 @@ function Document() {
         })}
         </div>
         <hr />
+
         {/* IOT */}
+
         <div className=" text-center font-semibold text-white m-3 py-2 px-3 w-48 text-red bg-green-900 rounded-md">
              IOT
         </div>

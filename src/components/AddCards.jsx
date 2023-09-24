@@ -6,7 +6,7 @@ function AddCards({AddCards}) {
         const[Name , setName] = useState("");
         const[Catg , setCatg] = useState("");
         const[desc , setdesc] = useState("");
-
+  
         const submit = (e) => {
             if(!Name || !Catg || !desc) {
                 alert("Please fill the blanks");
