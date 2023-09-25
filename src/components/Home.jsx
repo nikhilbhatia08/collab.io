@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import {Link} from 'react-router-dom'
+import Slides from './Slides'
 
 function Home() {
   return (
@@ -29,6 +30,7 @@ function Home() {
         </Link>
       </div>
     </div>
+    <Slides/>
     <h1 className=" text-gray-200 text-4xl font-bold mx-20 pb-5">Why Collab.io ?</h1>
   </div>
 

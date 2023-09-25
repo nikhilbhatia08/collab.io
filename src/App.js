@@ -14,6 +14,7 @@ import AddCards from './components/AddCards';
 import Insights from './components/Insights';
 import About from './components/About';
 import Document from './components/Document';
+import Rankings from './components/Rankings';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/getstarted' element={<Getstarted/>}/>
-        <Route path='/user/:userid' element={<Account/>}/>
+        <Route path='/Rankings' element={<Rankings/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route exact path='/About' element={<About/>}/>
+        <Route path='/user/:userId' element={<Account/>}/>
         <Route exact path='/Addproj' element={<Addproj/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
         <Route exact path='/Document' element={<Document/>}/>
