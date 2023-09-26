@@ -20,6 +20,7 @@ import Register from './components/Register';
 import Orgreg from './components/Orgreg';
 import Qa from './components/Qa';
 import EditOwnProf from './components/EditOwnProf';
+import Info from './components/Info';
 
 function App() {
   return (
