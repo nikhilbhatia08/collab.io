@@ -43,8 +43,8 @@ function App() {
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
-        <Route path='/Login/Register' element={<Register/>}/>
-        <Route path='/Login/Register/Orgreg' element={<Orgreg/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/orgregister' element={<Orgreg/>}/>
         <Route path='/Rankings/Info' element={<Info/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
