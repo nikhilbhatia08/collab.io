@@ -202,7 +202,7 @@ function Home() {
     </div>
   </div>
 </div>
-<footer class=" bg-gradient-to-b from-violet-600/[.19] to-blue-900">
+{/* <footer class=" bg-gradient-to-b from-violet-600/[.19] to-blue-900">
   <div class="max-w-[90rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
       <div class="col-span-full lg:col-span-1">
@@ -283,7 +283,7 @@ function Home() {
       </div>
     </div>
   </div>
-</footer>
+</footer> */}
 </div>
     </>
   )

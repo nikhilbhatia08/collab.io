@@ -21,6 +21,7 @@ import Orgreg from './components/Orgreg';
 import Qa from './components/Qa';
 import EditOwnProf from './components/EditOwnProf';
 import Info from './components/Info';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
       </Routes>
+      <Footer/>
     </div>
     </>
   );
