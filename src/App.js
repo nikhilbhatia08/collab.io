@@ -19,7 +19,6 @@ import EditProfile from './components/EditProfile';
 import Register from './components/Register';
 import Orgreg from './components/Orgreg';
 import Qa from './components/Qa';
-import Info from './components/Info'
 
 function App() {
   return (
