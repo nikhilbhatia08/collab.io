@@ -67,10 +67,10 @@ function DetaulFree() {
                         <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
                         <div class="mb-2 text-blueGray-600">
-                        <i class="fas fa-university mr-2 text-lg text-blueGray-400">Title : Food Delivery space</i>
+                        <i class="mr-2 text-lg text-blueGray-400">Title : Food Delivery space</i>
                         </div>
                         <div class="mb-2 text-blueGray-600">
-                        <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>Category : 
+                        <i class=" mr-2 text-lg text-blueGray-400"></i>Category : Web Development
                         </div>
                             <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
                             To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link.
