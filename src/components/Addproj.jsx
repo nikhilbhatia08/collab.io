@@ -16,39 +16,67 @@ const customStyles = {
     },
   };
 
-const dummyCont = [
-    {
-        name: "Nikhil Bhatia",
-        id: 1,    
-    },
-    {
-        name: "Vignesh",
-        id:2,
-    },
-    {
-        name: "Varun", 
-        id: 3,
-    }
-];  //this will come from the database and will contain the details of the followers of that user
+// const dummyCont = [
+//     {
+//         name: "Nikhil Bhatia",
+//         id: 1,    
+//     },
+//     {
+//         name: "Vignesh",
+//         id:2,
+//     },
+//     {
+//         name: "Varun", 
+//         id: 3,
+//     }
+// ];  //this will come from the database and will contain the details of the followers of that user
  
-let items = [];
+// let items = [];
 
-let num = 0;  //to sepparate the duplicate items
+// let num = 0;  //to sepparate the duplicate items
 
 function Addproj() {
+    const [title, setTitle] = useState('');
     const [imglink, setimglink] = useState('');
+    const [desc, setdesc] = useState('');
+    const [video, setvideo] = useState('');
+    const [arch_img, setarch_img] = useState('');
+    const [arch_desc, setarch_desc] = useState('');
+    const [insta, setinsta] = useState('');
+    const [twitter, settwitter] = useState('');
+    const [github, setgithub] = useState('');
+    const [slack, setslack] = useState('');
     const [cont, setCont] = useState([]);
     const [open, setOpen] = useState(false);
+    let handleSubmit = async(e) => {
+        e.preventDefault();
+        const data = {
+            title: title,
+            img: imglink,
+            description: desc,
+            video: video,
+            arch_img: arch_img,
+            arch_desc: arch_desc,
+            insta: insta,
+            twitter: twitter,
+            github: github,
+            slack: slack,
+            contributors: cont,
+            sponsors: [],
+        }
+        const response = await axios.post('http://localhost:5050/project', data);
+        console.log(response);
+    }
   return (
     <div className="mb-10 mt-5 ">
         <div className="mx-2">
         </div>
-        <div className="mt-4 flex items-center justify-center bg-slate-600/[.19]">
-            <div className="flex-col bg-slate-700 border basis-3/4 rounded-md border-white">
-                <div className="px-3 py-3 "><h1 className="text-white border-b text-4xl font-semibold mb-3">Add your Project</h1></div>
+        <div className="mt-4 flex items-center justify-center">
+            <div className="flex-col bg-white border-4 basis-3/4 rounded-md border-white">
+                <div className="px-3 py-3 "><h1 className="text-black border-b text-4xl font-semibold mb-3">Add your Project</h1></div>
                 <form action="">
                 <div className="px-3 flex felx-wrap">
-                    <h1 className="text-white text-2xl">Title  : </h1>
+                    <h1 className="text-black text-2xl">Title  : </h1>
                     <input className="mx-12 px-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" type="text" placeholder='Add your title Here'/>
                 </div>
                 {/* <div className="px-3 flex mt-4 items-center">
@@ -60,35 +88,35 @@ function Addproj() {
                     <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" type="text" placeholder='Drive URL'/>
                 </div>
                 <div className="flex px-2 mt-4 h-10 flex-wrap">
-                    <h1 className=" text-white text-2xl items-start">Enter the description : </h1>
-                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' type="text" placeholder="Description"/>
+                    <h1 className="text-2xl items-start">Enter the description : </h1>
+                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="px-3 mt-3 flex felx-wrap">
-                    <h1 className="text-white text-2xl text-2xl">Video url :  </h1>
-                    <input className="mx-12 py-3 px-3 lg:w-[500px] flex-1 rounded-md bg-slate-200" type="text" placeholder='Enter Youtube video url here'/>
+                    <h1 className="text-black text-2xl">Video url :  </h1>
+                    <input className="mx-12 px-3 lg:w-[500px] flex-1 rounded-md bg-slate-200" type="text" placeholder='Enter Youtube video url here'/>
                 </div>
-                <div className="px-3 mt-4 flex felx-wrap">
-                    <h1 className="text-white text-2xl text-2xl mt-3">Enter Drive Link of Project Documentation : </h1>
-                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" type="text" placeholder='Drive URL'/>
+                <div className="px-3 flex mt-4 items-center">
+                    <h1 className="text-black text-2xl">Enter Image of the architecture  :  </h1>
+                    <input value={imglink} onChange={(e)=>{setimglink(e.target.value)}} className="text-black mx-12" type="file" id="img" name="img" accept="image/*"/>
                 </div>
                 <div className="flex px-3 mt-4 h-10 flex-wrap">
-                    <h1 className="text-white text-2xl items-start">Enter the Architecture description : </h1>
+                    <h1 className="text-2xl items-start">Enter the Architecture description : </h1>
                     <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' type="text" placeholder="Description"/>
                 </div>
                 <div className="mt-10 px-3 py-3">
                     <h1 className="border-b text-white text-2xl">Add Social media accounts</h1>
                     <div className="flex-col">
                         <div className="py-2 flex items-center">
-                            <h1 className='text-white text-2xl'>Instagram : </h1>
-                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Instagram video url here'/>
+                            <h1 className='text-2xl'>Instagram : </h1>
+                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Youtube video url here'/>
                         </div>
                         <div className="py-2 flex items-center">
-                            <h1 className='text-white text-2xl'>Twitter : </h1>
-                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Twitter  url here'/>
+                            <h1 className='text-2xl'>Twitter : </h1>
+                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Youtube video url here'/>
                         </div>
                         <div className="py-2 flex items-center">
-                            <h1 className='text-white text-2xl'>Github : </h1>
-                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Github url here'/>
+                            <h1 className='text-2xl'>Github : </h1>
+                            <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" type="text" placeholder='Enter Youtube video url here'/>
                         </div>
                         <div className="py-2 flex items-center">
                             <h1 className='text-white text-2xl'>Slack : </h1>

@@ -4,11 +4,8 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 
 function Navbar() {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'))
-    setUser(user);
-  }, [])
+  const us = localStorage.getItem('user');
+  const user = JSON.parse(us);
   return (
     <>
     <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
