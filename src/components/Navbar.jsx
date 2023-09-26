@@ -56,8 +56,8 @@ function Navbar() {
                 <Link to='/downloads' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300" >
                   Downloads
                 </Link>
-                <Link to='/team' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300" >
-                  Team Account
+                <Link to='/EditProfile' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300" >
+                  Edit Profile
                 </Link>
               </div>
             </div>
@@ -65,8 +65,8 @@ function Navbar() {
             <Link to='/downloads' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300">
               Downloads
             </Link>
-            <Link to='/team' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300">
-              Team Account
+            <Link to='/EditProfile' class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500  text-gray-400  hover:bg-gray-700  hover:text-gray-300">
+                Edit Profile
             </Link>
           </div>
         </div>

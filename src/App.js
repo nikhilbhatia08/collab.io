@@ -15,6 +15,9 @@ import Insights from './components/Insights';
 import About from './components/About';
 import Document from './components/Document';
 import Rankings from './components/Rankings';
+import EditProfile from './components/EditProfile';
+import Register from './components/Register';
+import Orgreg from './components/Orgreg';
 
 function App() {
   return (
@@ -32,9 +35,12 @@ function App() {
         <Route exact path='/Addproj' element={<Addproj/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
         <Route exact path='/Document' element={<Document/>}/>
+        <Route exact path='/EditProfile' element={<EditProfile/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
+        <Route path='/Login/Register' element={<Register/>}/>
+        <Route path='/Login/Register/Orgreg' element={<Orgreg/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
       </Routes>
     </div>

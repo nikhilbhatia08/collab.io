@@ -116,8 +116,8 @@ function Home() {
 
       <div>
         <div>
-          <h3 class="block ml-3 font-bold text-white">Improve your coding skills</h3>
-          <p class="ml-3 text-gray-400">Get mentorship from top mentors in coding and ace coding rounds</p>
+          <h3 class="block ml-3 font-bold text-white">Question and answers Forums</h3>
+          <p class="ml-3 text-gray-400">Your Questions, Our Community, Endless Answers.</p>
         </div>
 
         <p class="mt-3 ml-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
