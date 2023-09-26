@@ -14,13 +14,11 @@ function Login() {
         }
         const response = await axios.post('http://localhost:5050/login', data)
         if(response.status === 200) {
-            //localStorage.setItem('token', response.data.token)
-            
-            localStorage.setItem('user', JSON.stringify(response.data))
+            localStorage.setItem('user', JSON.stringify(response.data));
             window.location = '/'
         }
         else {
-
+            alert('Invalid credentials');
         }
     }
   return (
