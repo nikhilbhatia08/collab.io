@@ -26,7 +26,7 @@ function Getfreelance() {
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Unlock the Door to Your <span className="text-blue-500" >Freelance Dreams</span></h2>
-      <p class="mt-2 text-lg leading-8 text-gray-600">So, what are you waiting for?seize the opportunity, unleash your potential, and let your freelance journey begin with a single, electrifying choice here!</p>
+      <p class="mt-2 text-lg leading-8 text-gray-50">So, what are you waiting for?seize the opportunity, unleash your potential, and let your freelance journey begin with a single, electrifying choice here!</p>
     </div>
     {/* add item */}
     <div className=" flex justify-between mt-5 border p-3 rounded-md text-white">

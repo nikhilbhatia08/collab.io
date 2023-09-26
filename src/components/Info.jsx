@@ -1,6 +1,34 @@
 import { Link } from "react-router-dom";
 
 function Info() {
+   const det = [{
+      name : "Maneesh Reddy",
+      projects : 20,
+      Hack : 15,
+      dept : "4th/CSE",
+      Ranking : 1,
+      src : "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+      img : "https://iitb-wustl.org/images/banner-2.jpg"
+     },
+     {
+      name : "Hemanth",
+      projects : 18,
+      Hack : 9,
+      dept : "3rd/ECE",
+      Ranking : 2,
+      src : "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png",
+      img : " "
+     },
+     {
+      name : "IIT Delhi",
+      projects :15,
+      Hack : 7,
+      Ranking : 3,
+      dept : "4th/AIML",
+      src : "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg/1200px-Indian_Institute_of_Technology_Delhi_Logo.svg.png",
+      img : " "
+     }
+];
     return(
        
         <div className="mx-5 mb-10 pb-64"> 
@@ -38,6 +66,108 @@ function Info() {
           </div>
          </div>
          <hr/>
+         <div class="container mx-auto px-4 sm:px-8">
+  <div class="py-8">
+    <div>
+      <h2 class="text-white text-center underline font-bold leading-tight">COLLEGE RANKINGS</h2>
+    </div>
+    <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+      <div
+        class="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
+      >
+        <table class="min-w-full leading-normal">
+          <thead>
+            <tr>
+            <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-slate-600 text-left text-xs font-bold text-white uppercase tracking-wider"
+              >
+                Ranking
+              </th>
+
+              <th
+                class="px-8 py-5 border-b-2 border-gray-200 bg-slate-600 text-left text-xs font-bold text-white uppercase tracking-wider"
+              >
+                Name
+              </th>
+
+              <th
+                class="px-8 py-5 border-b-2 border-gray-200 bg-slate-600 text-left text-xs font-bold text-white uppercase tracking-wider"
+              >
+                Year-Dept
+              </th>
+
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-slate-600 text-left text-xs font-bold text-white uppercase tracking-wider"
+              >
+                No. of Projects
+              </th>
+              <th
+                class="px-3 py-3 border-b-2 border-gray-200 bg-slate-600 text-left text-xs font-bold text-white uppercase tracking-wider"
+              >
+                Hackathons won
+              </th>              
+            </tr>
+          </thead>
+          <tbody>
+            {det.map((node)=>{
+                return(
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
+                <span
+                  class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                >
+                  <span
+                    aria-hidden
+                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                  ></span>
+                  <span class="relative">{node.Ranking}</span>
+                </span>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
+                <div class="flex">
+                  <div class="ml-3">
+                    <p class="text-white text-bold mt-3 whitespace-no-wrap">
+                      <Link to='Info'  > {node.name}</Link>
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
+                <p class="text-white whitespace-no-wrap">{node.dept}</p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
+                <p class="text-white whitespace-no-wrap">{node.projects}</p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
+                <p class="text-white whitespace-no-wrap">{node.Hack}</p>
+                {/* <p class="text-gray-600 whitespace-no-wrap">Due in 3 days</p> */}
+              </td>
+              <td
+                class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm text-right"
+              >
+                <button
+                  type="button"
+                  class="inline-block text-gray-500 hover:text-gray-700"
+                >
+                  <svg
+                    class="inline-block h-6 w-6 fill-current"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr> 
+                )
+            })}
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
     )
 }
