@@ -18,6 +18,7 @@ import Rankings from './components/Rankings';
 import EditProfile from './components/EditProfile';
 import Register from './components/Register';
 import Orgreg from './components/Orgreg';
+import Qa from './components/Qa';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route exact path='/Addproj' element={<Addproj/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
         <Route exact path='/Document' element={<Document/>}/>
+        <Route exact path='/Qa' element={<Qa/>}/>
         <Route exact path='/EditProfile' element={<EditProfile/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
