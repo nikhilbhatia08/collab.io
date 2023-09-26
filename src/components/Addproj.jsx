@@ -50,11 +50,12 @@ function Addproj() {
     const [cont, setCont] = useState([]);
     const [open, setOpen] = useState(false);
     const [dummyCont, setdummyCont] = useState([]);
+    const user = JSON.parse(localStorage.getItem('user'));
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('user'));
-        axios.get(`http://localhost:5050/user/${user.id_p}/followers`)
+        axios.get(`http://localhost:5050/user/${user.id_p}/following`)
             .then((res)=>{
                 setdummyCont(res.data);
+                console.log(res.data);
             })
             .catch((err)=>{
                 console.log(err);
@@ -76,8 +77,14 @@ function Addproj() {
             contributors: items,
             sponsors: [],
         }
-        const response = await axios.post('http://localhost:5050/project', data);
-        console.log(response);
+        const response = await axios.post(`http://localhost:5050/user/${user.id_p}/addproj`, data);
+        if(response.status === 200){
+            alert("Project Added Successfully");
+            window.location.href = `/`;
+        }
+        else {
+            alert("There was some error");
+        }
     }
   return (
     <div className="mb-10 mt-5 ">
@@ -155,7 +162,7 @@ function Addproj() {
                                                 <div className='w-12 h-12'>
                                                     <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
                                                 </div>
-                                                <h1 className='text-white text-2xl mx-2'>{item.name}</h1>
+                                                <h1 className='text-black text-2xl mx-2'>{item.name}</h1>
                                                 <div className='flex-1 flex justify-end'>
                                                 <button onClick={()=>{
                                                     if((num & (1 << idx + 1)) === 0){
@@ -174,7 +181,7 @@ function Addproj() {
                     </div>
                     <div className='flex'>
                         <div className='flex-col basis-1/4'>
-                    {items.map((item)=>{
+                    {items.map((item, idx)=>{
                         return <div className='mt-2 flex items-center'>
                         <div className='w-12 h-12'>
                             <img className='rounded-full' src={require('../pictures/picofdev.png')} alt="" />
@@ -185,7 +192,7 @@ function Addproj() {
                             e.preventDefault();
                             setCont(cont.filter((cont)=>cont.id !== item.id));
                             items = items.filter((cont)=>cont.id !== item.id);
-                            num = (num & ~(1 << item.id));
+                            num = (num & ~(1 << idx + 1));
                         }} className='text-white text-2xl px-3 py-1.5 rounded-md bg-red-500'>Remove</button>
                         </div>
                         </div>
