@@ -201,7 +201,7 @@ function Home() {
             From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
           </p>
         </div>
-      </div> */}
+      </div> 
     </div>
   </div>
 </div>
@@ -286,8 +286,7 @@ function Home() {
       </div>
     </div>
   </div>
-</footer> */}
-</div>
+</footer> 
     </>
   )
 }
