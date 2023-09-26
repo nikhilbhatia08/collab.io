@@ -102,7 +102,7 @@ return(
                   </div>
                   <div class="ml-3">
                     <p class="text-white text-bold mt-3 whitespace-no-wrap">
-                      <Link to='/Info'  > {node.name}</Link>
+                      <Link to='Info'  > {node.name}</Link>
                     </p>
                   </div>
                 </div>
