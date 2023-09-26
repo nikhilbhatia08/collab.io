@@ -84,11 +84,11 @@ function Addproj() {
         <div className="mx-2">
         </div>
         <div className="mt-4 flex items-center justify-center">
-            <div className="flex-col bg-white border-4 basis-3/4 rounded-md border-white">
-                <div className="px-3 py-3 "><h1 className="text-black border-b text-4xl font-semibold mb-3">Add your Project</h1></div>
+            <div className="flex-col bg-slate-800 border basis-3/4 rounded-md border-white">
+                <div className="px-3 py-3 "><h1 className="text-white border-b text-4xl font-semibold mb-3">Add your Project</h1></div>
                 <form onSubmit={handleSubmit}>
                 <div className="px-3 flex felx-wrap">
-                    <h1 className="text-black text-2xl">Title  : </h1>
+                    <h1 className="text-white text-2xl">Title  : </h1>
                     <input className="mx-12 px-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={title} onChange={(e) => {setTitle(e.target.value)}} type="text" placeholder='Add your title Here'/>
                 </div>
                 {/* <div className="px-3 flex mt-4 items-center">
@@ -100,34 +100,34 @@ function Addproj() {
                     <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={imglink} onChange={(e) => {setimglink(e.target.value)}} type="text" placeholder='Drive URL'/>
                 </div>
                 <div className="flex px-2 mt-4 h-10 flex-wrap">
-                    <h1 className="text-2xl items-start">Enter the description : </h1>
+                    <h1 className="text-white text-2xl items-start">Enter the description : </h1>
                     <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => {setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="px-3 mt-3 flex felx-wrap">
-                    <h1 className="text-black text-2xl">Video url :  </h1>
+                    <h1 className="text-white text-2xl">Video url :  </h1>
                     <input className="mx-12 px-3 lg:w-[500px] flex-1 rounded-md bg-slate-200" value={video} onChange={(e) => {setvideo(e.target.value)}} type="text" placeholder='Enter Youtube video url here'/>
                 </div>
-                <div className="px-3 flex mt-4 items-center">
-                    <h1 className="text-black text-2xl">Enter Image of the architecture  :  </h1>
-                    <input value={arch_img} onChange={(e)=>{setarch_img(e.target.value)}} className="text-black mx-12" type="file" id="img" name="img" accept="image/*"/>
+                <div className="px-3 mt-4 flex felx-wrap">
+                    <h1 className="text-white text-2xl mt-3">Enter Drive Link of Project Documentation : </h1>
+                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={imglink} onChange={(e) => {setimglink(e.target.value)}} type="text" placeholder='Drive URL'/>
                 </div>
                 <div className="flex px-3 mt-4 h-10 flex-wrap">
-                    <h1 className="text-2xl items-start">Enter the Architecture description : </h1>
+                    <h1 className="text-white text-2xl items-start">Enter the Architecture description : </h1>
                     <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={arch_desc} onChange={(e) => {setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="mt-10 px-3 py-3">
                     <h1 className="border-b text-white text-2xl">Add Social media accounts</h1>
                     <div className="flex-col">
                         <div className="py-2 flex items-center">
-                            <h1 className='text-2xl'>Instagram : </h1>
+                            <h1 className='text-white text-2xl'>Instagram : </h1>
                             <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" value={insta} onChange={(e) => {setinsta(e.target.value)}} type="text" placeholder='Enter Instagram url here'/>
                         </div>
                         <div className="py-2 flex items-center">
-                            <h1 className='text-2xl'>Twitter : </h1>
+                            <h1 className='text-white text-2xl'>Twitter : </h1>
                             <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" value={twitter} onChange={(e) => {settwitter(e.target.value)}} type="text" placeholder='Enter twitter url here'/>
                         </div>
                         <div className="py-2 flex items-center">
-                            <h1 className='text-2xl'>Github : </h1>
+                            <h1 className=' text-white text-2xl'>Github : </h1>
                             <input className="mx-1 px-3 lg:w-[400px] md:w-[200px] py-2 sm:w-[100px] rounded-md bg-slate-200" value={github} onChange={(e) => {setgithub(e.target.value)}} type="text" placeholder='Enter github url here'/>
                         </div>
                         <div className="py-2 flex items-center">
