@@ -89,7 +89,7 @@ function Addproj() {
                 </div>
                 <div className="flex px-2 mt-4 h-10 flex-wrap">
                     <h1 className="text-2xl items-start">Enter the description : </h1>
-                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' type="text" placeholder="Description"/>
+                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="px-3 mt-3 flex felx-wrap">
                     <h1 className="text-black text-2xl">Video url :  </h1>
