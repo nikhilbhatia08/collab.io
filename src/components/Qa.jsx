@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Qa() {
     return (
-        <div className="w-screen h-screen mx-10 my-10 text-white">
+        <div className="h-screen h-screen mx-10 my-10 text-white">
           <div className="text-center">
            <h1 className="font-bold text-blue-600 text-4xl">Question and Answers Forums</h1>
            </div>
