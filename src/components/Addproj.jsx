@@ -101,7 +101,7 @@ function Addproj() {
                 </div>
                 <div className="flex px-2 mt-4 h-10 flex-wrap">
                     <h1 className="text-white text-2xl items-start">Enter the description : </h1>
-                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => {setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
+                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => {setdesc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="px-3 mt-3 flex felx-wrap">
                     <h1 className="text-white text-2xl">Video url :  </h1>
@@ -109,7 +109,7 @@ function Addproj() {
                 </div>
                 <div className="px-3 mt-4 flex felx-wrap">
                     <h1 className="text-white text-2xl mt-3">Enter Drive Link of Project Documentation : </h1>
-                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={imglink} onChange={(e) => {setimglink(e.target.value)}} type="text" placeholder='Drive URL'/>
+                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={arch_img} onChange={(e) => {setarch_img(e.target.value)}} type="text" placeholder='Drive URL'/>
                 </div>
                 <div className="flex px-3 mt-4 h-10 flex-wrap">
                     <h1 className="text-white text-2xl items-start">Enter the Architecture description : </h1>
