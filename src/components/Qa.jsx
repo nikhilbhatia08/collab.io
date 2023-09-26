@@ -32,8 +32,8 @@ function Qa() {
 				placeholder="Question description"
 			/>
            </div>
-           <div class="mt-8 flex content-center">
-                <button class="bg-blue-500 text-white font-bold py-2 w-min px-4 w-full rounded hover:bg-blue-800">Login</button>
+           <div class="mx-96">
+                <button class="bg-blue-500 mx-96 my-5 text-white font-bold py-2 w-min px-4 w-full rounded hover:bg-blue-800">Submit</button>
             </div>
            <div className="my-3 mx-24 px-3 py-3 width h-64 w-192  border-solid border bg-slate-800 rounded-md border-white">
            <ul class="list-disc mx-4 list-inside">

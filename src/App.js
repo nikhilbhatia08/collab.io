@@ -19,6 +19,7 @@ import EditProfile from './components/EditProfile';
 import Register from './components/Register';
 import Orgreg from './components/Orgreg';
 import Qa from './components/Qa';
+import Info from './components/Info'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/Login/Register' element={<Register/>}/>
         <Route path='/Login/Register/Orgreg' element={<Orgreg/>}/>
+        <Route path='/Rankings/Info' element={<Info/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
       </Routes>
     </div>

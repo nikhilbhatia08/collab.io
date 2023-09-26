@@ -1,4 +1,5 @@
-
+import {Link} from 'react-router-dom'
+import Info from './Info'
 
 function DataRankings() {
    const det = [{
@@ -7,6 +8,7 @@ function DataRankings() {
     Hack : 200,
     Ranking : 1,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+    img : "https://iitb-wustl.org/images/banner-2.jpg"
    },
    {
     name : "IIT Madras",
@@ -14,6 +16,7 @@ function DataRankings() {
     Hack : 180,
     Ranking : 2,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png",
+    img : " "
    },
    {
     name : "IIT Delhi",
@@ -21,6 +24,7 @@ function DataRankings() {
     Hack : 175,
     Ranking : 3,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg/1200px-Indian_Institute_of_Technology_Delhi_Logo.svg.png",
+    img : " "
    },
    {
     name : "IIT Hyderabad",
@@ -28,6 +32,7 @@ function DataRankings() {
     Hack : 174,
     Ranking : 4,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/1/19/IIT_Hyderabad_Insignia.svg/1200px-IIT_Hyderabad_Insignia.svg.png",
+    img : " "
    },
    {
     name : "IIT Roorkie",
@@ -35,6 +40,7 @@ function DataRankings() {
     Hack : 172,
     Ranking : 5,
     src : "https://www.iitr.ac.in/dic/img/IITR.jpg",
+    img : " "
    },
    {
     name : "IIT Kanpur",
@@ -42,6 +48,7 @@ function DataRankings() {
     Hack : 170,
     Ranking : 6,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/IIT_Kanpur_Logo.svg/1200px-IIT_Kanpur_Logo.svg.png",
+    img : " "
    },
    {
     name : "IIT KHARAGPUR",
@@ -49,6 +56,7 @@ function DataRankings() {
     Hack : 168,
     Ranking : 7,
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/1200px-IIT_Kharagpur_Logo.svg.png",
+    img : " "
    },
    {
     name : "CMR College of Engineering and Technology",
@@ -56,6 +64,7 @@ function DataRankings() {
     Hack : 80,
     Ranking : 8,
     src : "https://media.licdn.com/dms/image/C560BAQEEf96n13OC1A/company-logo_200_200/0/1658502157654?e=2147483647&v=beta&t=KeBlSx_yrLRoGYConDMa0XxTm-X_zXcLHSFb_R9FbkA",
+    img : " "
    },
    {
     name : "St.Peters College",
@@ -63,6 +72,7 @@ function DataRankings() {
     Hack : 40,
     Ranking : 9,
     src : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7cN_zNaa6AxHkE0PruzPDTw1yndFdX4XpUSx0ZijaX9C2L0_Cet_xmfjg51tmpPrnxnI&usqp=CAU",
+    img : " "
    }
 ];
 return(
@@ -92,7 +102,7 @@ return(
                   </div>
                   <div class="ml-3">
                     <p class="text-white text-bold mt-3 whitespace-no-wrap">
-                      {node.name}
+                      <Link to='/Info'  > {node.name}</Link>
                     </p>
                   </div>
                 </div>
