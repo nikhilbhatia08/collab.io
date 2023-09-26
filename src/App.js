@@ -22,6 +22,7 @@ import Qa from './components/Qa';
 import EditOwnProf from './components/EditOwnProf';
 import Info from './components/Info';
 import Footer from './components/Footer';
+import DetaulFree from './components/DetaulFree';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route exact path='/EditProfile' element={<EditProfile/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/projects/:projectId' element={<Inproj/>}/>
+        <Route exact path='/GetFreelance/DetaulFree' element={<DetaulFree/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/orgregister' element={<Orgreg/>}/>

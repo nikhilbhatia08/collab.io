@@ -40,7 +40,9 @@ function Getfreelance() {
       {details.map((node)=>{
            return(
              <>
+              <Link to='DetaulFree'>
               <Cards Name={node.Name} category={node.category} Description={node.Description}/> 
+              </Link>
              </>
            )
         })} 

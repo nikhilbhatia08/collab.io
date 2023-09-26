@@ -19,13 +19,12 @@ function Cards({Name , category , Description}) {
                 <Link to='#' className='text-white' >Contact Us</Link>
             </div>
             <div class="relative mt-8 flex items-center gap-x-4">
-                <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50" />
+                <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50" />
                 <div class="text-sm leading-6">
                     <p class="font-semibold text-gray-900">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Michael Foster
-                        </a>
+                        <div className="text-white">
+                            Jenna Stones
+                        </div>
                     </p>
                     <p class="text-gray-600 my-2">Co-Founder / CTO</p>
                 </div>
