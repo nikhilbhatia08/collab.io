@@ -20,10 +20,10 @@ function RgWait() {
   const [det, setDet] = useState([]);
   const id = useParams().orgId;
   const [u_id, setu_id] = useState('');
-  const [approval, setApproval] = useState('');
+  const [data, setData] = useState({});
   let handleSubmit = async(e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:5050/org/${id}/userapproval/${u_id}`, approval)
+    await axios.post(`http://localhost:5050/org/${id}/userapproval/${u_id}`, data)
     .then(res => {
       if(res.status === 200){
         alert("approved");
@@ -107,10 +107,10 @@ function RgWait() {
               <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
                 <form onSubmit={handleSubmit}>
                     <div class="mt-8">
-                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-green-400" onClick={() => {setApproval({approve: true}); setu_id(node.id)}} type='submit'>Accept</button>
+                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-green-400" onClick={() => {setData({approve: true}); setu_id(node.id)}} type='submit'>Accept</button>
                     </div>
                     <div class="mt-8">
-                        <button class="bg-red-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-red-400" onClick={() => {setApproval({approve: false}); setu_id(node.id)}} type='submit'>Regect</button>
+                        <button class="bg-red-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-red-400" onClick={() => {setData({approve: false}); setu_id(node.id)}} type='submit'>Reject</button>
                     </div>
                 </form>    
               </td>

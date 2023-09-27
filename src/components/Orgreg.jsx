@@ -17,7 +17,7 @@ function Orgreg(){
 			name: name,
 			address: address
 		}
-		await axios.post('http://localhost:5050/org/register', data)
+		await axios.post('http://localhost:5050/orgregister', data)
 		.then(res => {
 			if(res.status === 200) {
 				alert('Registered successfully');
@@ -43,7 +43,7 @@ function Orgreg(){
                         </div>
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 						<h3 class="pt-4 text-2xl text-center">Create an Account!</h3>
-						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={handleSubmit}>
 						<div class="mb-4">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="InName">
 								Institue Name
