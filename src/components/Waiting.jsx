@@ -108,7 +108,7 @@ function Waiting() {
                 <div class="flex">
                   <div class="ml-3">
                     <p class="text-white text-bold mt-3 whitespace-no-wrap">
-                      <Link to='Info'  > {node.roll}</Link>
+                      <Link to={`https://www.youtube.com/watch?v=o6xikISiz2w&t=876s`}  > video link</Link>
                     </p>
                   </div>
                 </div>
