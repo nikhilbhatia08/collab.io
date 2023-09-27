@@ -59,6 +59,8 @@ function App() {
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
         <Route path='/Blog/Readblog' element={<Readblog/>}/>
+        <Route path='/org/:orgId/approve' element={<Waiting/>}/>
+        <Route path='/org/:orgId/approvestud' element={<RgWait/>}/>
       </Routes>
       <Footer/>
     </div>
