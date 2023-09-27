@@ -1,5 +1,35 @@
 import { Link } from "react-router-dom";
+import axios from 'axios';
+import { useEffect, useState } from "react";
+
 function Orgreg(){
+	const [email , setEmail] = useState('');
+	const [password , setPassword] = useState('');
+	const [code , setCode] = useState('');
+	const [name , setName] = useState('');
+	const [address , setAddress] = useState('');
+	let handleSubmit = async(e) => {
+		e.preventDefault();
+		const data = {
+			email: email,
+			password: password,
+			id_o: code,
+			name: name,
+			address: address
+		}
+		await axios.post('http://localhost:5050/org/register', data)
+		.then(res => {
+			if(res.status === 200) {
+				alert('Registered successfully');
+				window.location = '/login'
+			}
+			else {
+				localStorage.setItem('user', JSON.stringify(res.data))}})
+		.catch(err => {
+			console.log(err);
+		}
+		)
+	}
     return(
         <>
                    <body class="bg-slate-800">
@@ -23,6 +53,8 @@ function Orgreg(){
 									id="InName"
 									type="text"
 									placeholder="Institue Name"
+									value={name}
+									onChange={(e) => {setName(e.target.value)}}
 								/>
 							</div>
 								{/* <div class="md:ml-2">
@@ -45,6 +77,8 @@ function Orgreg(){
 									id="email"
 									type="email"
 									placeholder="Email"
+									value={email}
+									onChange={(e) => {setEmail(e.target.value)}}
 								/>
 							</div>
 							<div class="mb-4">
@@ -56,17 +90,21 @@ function Orgreg(){
 									id="InName"
 									type="text"
 									placeholder="Institue Address"
+									value={address}
+									onChange={(e) => {setAddress(e.target.value)}}
 								/>
 							</div>
 							<div class="mb-4">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="InName">
-								Institue Location
+								College code
 								</label>
 								<input
 									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 									id="InName"
 									type="text"
-									placeholder="Location URL"
+									placeholder="Enter college code"
+									value={code}
+									onChange={(e) => {setCode(e.target.value)}}
 								/>
 							</div>
 							<div class="mb-4 md:flex md:justify-between">
@@ -91,25 +129,27 @@ function Orgreg(){
 										id="c_password"
 										type="password"
 										placeholder="******************"
+										value={password}
+										onChange={(e) => {setPassword(e.target.value)}}
 									/>
 								</div>
 							</div>
 							<div class="mb-6 text-center">
 								<button
 									class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-800 focus:outline-none focus:shadow-outline"
-									type="button"
+									type="submit"
 								>
 									Register Account
 								</button>
 							</div>
 							<hr class="mb-6 border-t" />
 							<div class="text-center">
-								<a
+								<Link
 									class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
 									href="#"
 								>
 									Forgot Password?
-								</a>
+								</Link>
 							</div>
 							<div class="text-center">
 								<Link
