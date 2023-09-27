@@ -20,7 +20,7 @@ function Info() {
       img : " "
      },
      {
-      name : "IIT Delhi",
+      name : "Ram",
       projects :15,
       Hack : 7,
       Ranking : 3,
