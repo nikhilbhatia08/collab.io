@@ -19,14 +19,14 @@ function Register() {
 			first_name: firstName,
 			last_name: lastName
 		}
-		const response = await axios.post('http://localhost:5050/register', data)
-		if(response.status === 200) {
-			alert('Registered successfully');
-			window.location = '/'
-		}
-		else {
-			localStorage.setItem('user', JSON.stringify(response.data))
-		}
+		await axios.post('http://localhost:5050/register', data)
+		.then(res => {
+			if(res.status === 200) {
+				alert('Registered successfully');
+				window.location = '/'
+			}
+			else {
+				localStorage.setItem('user', JSON.stringify(res.data))}});
 	}
     return(
         <>

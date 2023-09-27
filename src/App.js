@@ -55,7 +55,7 @@ function App() {
         <Route exact path='/Qa' element={<Qa/>}/>
         <Route exact path='/EditProfile' element={<EditProfile/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
-        <Route exact path='/projects/:projectId' element={<Inproj/>}/>
+        <Route exact path='/project/:projectId' element={<Inproj/>}/>
         <Route exact path='/GetFreelance/DetaulFree' element={<DetaulFree/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/register' element={<Register/>}/>
@@ -75,6 +75,8 @@ function App() {
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
         <Route path='/Blog/Readblog' element={<Readblog/>}/>
+        <Route path='/org/:orgId/approve' element={<Waiting/>}/>
+        <Route path='/org/:orgId/approvestud' element={<RgWait/>}/>
       </Routes>
       <Footer/>
     </div>
