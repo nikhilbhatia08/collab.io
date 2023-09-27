@@ -79,8 +79,11 @@ function Addproj() {
         }
         const response = await axios.post(`http://localhost:5050/user/${user.id_p}/addproj`, data);
         if(response.status === 200){
-            alert("Project Added Successfully");
+            alert("Project Added Successfully to waiting list");
             window.location.href = `/`;
+        }
+        else if(response.data === 'pl'){
+            alert("Plagiarism detected");
         }
         else {
             alert("There was some error");

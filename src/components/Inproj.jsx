@@ -1,26 +1,41 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 
 function Inproj(props) {
     const  id  = useParams();
     const imgs = ['../pictures/picofdev.png', '../pictures/problem.png'];
-    const contributors = [1, 2, 4, 5, 6, 8, 9];
+    const [cont, setCont] = useState([]);
     const tech = ["Javascript", "React", "Nodejs", "Express", "MongoDB", "HTML", "CSS", "TailwindCSS"];
+    const [project, setProject] = useState({});
+    useEffect(() => {
+        console.log(id);
+        const res = axios.get(`http://localhost:5050/project/${id.projectId}`)
+        .then(res => {
+            console.log(res.data);
+            setProject(res.data);
+            setCont(res.data.contributors);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    },[]);
   return (
     <>
         <div className="py-4">
-        <h1 className="text-white mx-12 lg:text-3xl md:text-base sm:text-xs">Name/Title of the project</h1>
+        <h1 className="text-white mx-12 lg:text-3xl md:text-base sm:text-xs">{project.title} by {project.id_p}</h1>
         <div className="flex flex-wrap justify-center">
             <div className="mx-10 inline-block my-5 basis-3/4 self-start flex-col justify-center items-center rounded-lg border bg-slate-800 max-w-4xl px-6 lg:px-8">
                 <div><h1 className="text-white py-2 border-b lg:text-4xl md:text-base sm:text-xs">Readme</h1></div>
                 <div className="border-b pb-4">
                 <div className="my-4"><img className="mx-auto self-start lg:h-96 sm:h-40 md:h-24" src={require('../pictures/picofdev.png')} alt="" /></div>
-                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl">This section the contains the problem statement or the purpose of the propject</p></div>
-                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl">This section contains the solution for the problem statement and the reason fro the project</p></div>
+                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl">{project.statement}</p></div>
+                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl">{project.description}</p></div>
                 <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl inline-block">Deployment Link - </p><Link className="mx-2 text-blue-500 underline">sggsa</Link></div>
-                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl inline-block">Name of the college or institution - </p><Link className="mx-2 shadow-[0px_22px_22px__0px_rgba(31,_41,_234,_0.4)] text-blue-500 underline">College Name and link</Link></div>
+                <div><p className="text-white md:text-xs sm:text:xs lg:text-2xl inline-block">Name of the college or institution - </p><Link className="mx-2 shadow-[0px_22px_22px__0px_rgba(31,_41,_234,_0.4)] text-blue-500 underline">{project.org}</Link></div>
                 </div>
                 <div className="py-4 flex-col border-b">
                     <div className=""><h1 className="text-white sm:text-xs md:text-xs lg:text-4xl">Video</h1></div>
@@ -44,18 +59,18 @@ function Inproj(props) {
             </div>
             <div className="mx-10 my-5 inline-block self-start basis-1/4 flex-col rounded-lg border bg-slate-800 px-6">
                 <div className="border-b py-4">
-                <div className="flex items-center"><Link to={`/projects/${id.projectId}/insights/${1}`}><h1 className="text-white inline-block my-3 hover:text-blue-500 text-2xl">Contributors</h1></Link><p className="mx-3 text-white rounded-full bg-slate-400 px-2 border">{contributors.length}</p></div>
-                {contributors.map((contributor, idx)=>{
+                <div className="flex items-center"><Link to={`/projects/${id.projectId}/insights/${1}`}><h1 className="text-white inline-block my-3 hover:text-blue-500 text-2xl">Contributors</h1></Link><p className="mx-3 text-white rounded-full bg-slate-400 px-2 border">{cont.length}</p></div>
+                {cont.map((contributor, idx)=>{
                     return idx<4?<div className="flex-col">
                     <div className="flex my-3 items-center">
                         <div className="w-12 h-12  inline-block">
                             <img className="rounded-full inline-block" src={require('../pictures/picofdev.png')} alt="" />
                         </div>
-                        <Link to={`/user/idx`}><div className="inline-block"><p className="mx-4 hover:text-blue-500 inline-block text-white md:text:xl lg:text-2xl">Name</p></div></Link>
+                        <Link to={`/user/${contributor.id}`}><div className="inline-block"><p className="mx-4 hover:text-blue-500 inline-block text-white md:text:xl lg:text-2xl">{contributor.name}</p></div></Link>
                     </div>
                     </div>:<div></div>;
                 })}
-                <Link to={`/projects/${id.projectId}/contributors`}><p className="text-white mx-3 hover:text-blue-500">+ {contributors.length - 4} contributors</p></Link>
+                <Link to={`/projects/${id.projectId}/contributors`}><p className="text-white mx-3 hover:text-blue-500">+ {cont.length - 4} contributors</p></Link>
                 </div>
                 <div className="flex-col pb-5 border-b">
                     <h1 className="text-white text-2xl my-3">Tech Stack</h1>
@@ -67,7 +82,7 @@ function Inproj(props) {
                 </div>
                 <div className="flex-col pb-5">
                     <Link to={`/projects/${id.projectId}/sponsorors`}><h1 className="text-white text-2xl hover:text-blue-500 my-3">Sponsored By</h1></Link>
-                    {contributors.map((contributor, idx)=>{
+                    {cont.map((contributor, idx)=>{
                     return idx<4?<div className="flex-col">
                     <div className="flex my-3 items-center">
                         <div className="w-12 h-12  inline-block">
@@ -77,7 +92,7 @@ function Inproj(props) {
                     </div>
                     </div>:<div></div>;
                 })}
-                <Link to={`/projects/${id.projectId}/contributors`}><p className="text-white mx-3 hover:text-blue-500">+ {contributors.length - 4} sponsorors</p></Link>
+                <Link to={`/projects/${id.projectId}/contributors`}><p className="text-white mx-3 hover:text-blue-500">+ {cont.length - 4} sponsorors</p></Link>
                 </div>
             </div>
         </div>    
