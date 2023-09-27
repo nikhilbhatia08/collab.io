@@ -23,6 +23,10 @@ import EditOwnProf from './components/EditOwnProf';
 import Info from './components/Info';
 import Footer from './components/Footer';
 import DetaulFree from './components/DetaulFree';
+import Waiting from './components/Waiting'
+import RgWait from './components/RgWait'
+import Blog from './components/Blog';
+import Readblog from './components/Readblog';
 
 function App() {
   return (
@@ -47,10 +51,14 @@ function App() {
         <Route exact path='/GetFreelance/DetaulFree' element={<DetaulFree/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/Waiting' element={<Waiting/>}/>
+        <Route path='/Blog' element={<Blog/>}/>
+        <Route path='/RgWait' element={<RgWait/>}/>
         <Route path='/orgregister' element={<Orgreg/>}/>
         <Route path='/Rankings/Info' element={<Info/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
+        <Route path='/Blog/Readblog' element={<Readblog/>}/>
       </Routes>
       <Footer/>
     </div>

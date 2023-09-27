@@ -37,7 +37,7 @@ function Register() {
 					<div
 						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
 
-                        <img src="https://play-lh.googleusercontent.com/CnCw8_bzXTgHqomM5F4WFnkbP1KfH5-wQJ_Dn9mpLaWKX0cihWGORu2a27SYvtpg" alt="" />
+                        <img src="https://wallpapercave.com/wp/wp7743315.jpg" alt="" />
                         </div>
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 						<h3 class="pt-4 text-2xl text-center">Create an Account!</h3>

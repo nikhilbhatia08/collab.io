@@ -35,9 +35,6 @@ function Rankings() {
               >
                 Hackathons won
               </th>              
-              <th
-                class="px-5 py-3 border-b-2 border-gray-200 bg-slate-600"
-              ></th>
             </tr>
           </thead>
           <DataRankings/>

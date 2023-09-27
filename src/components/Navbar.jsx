@@ -28,7 +28,7 @@ function Navbar() {
         <Link class="font-medium text-blue-600 md:py-6 " to='/' aria-current="page">Home</Link>
         <Link class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " to='/Rankings'>Rankings</Link>
         <Link class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " to='/projects' >Projects</Link>
-        <Link class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " to='/blog' >Blog</Link>
+        <Link class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " to='/Blog' >Blog</Link>
 
         <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
           <button type="button" class="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium ">

@@ -3,6 +3,55 @@ import { Link } from 'react-router-dom';
 
 function Document() {
    let val=[1,2,3,4,5];
+   const soft=[{
+    name : "React Hooks",
+    sor : "react.dev",
+    src : "https://react.dev/blog/2023/03/16/introducing-react-dev"
+   },
+   {
+    name : "Dijkstra's algorithm",
+    sor : "CP-Algorithm",
+    src : "https://cp-algorithms.com/graph/dijkstra.html"
+   },
+   {
+    name : "servlets in java",
+    sor : "Oracle",
+    src : "https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html"
+   }
+  ];
+  const hard=[{
+    name : "carnot engine",
+    sor : "Wikipedia",
+    src : "https://en.wikipedia.org/wiki/Carnot_heat_engine"
+   },
+   {
+    name : "three phase transformer",
+    sor : "elprocus",
+    src : "https://www.elprocus.com/what-is-three-phase-transformer-construction-and-its-working/"
+   },
+   {
+    name : "CPU Hardware",
+    sor : "Red hat",
+    src : "https://www.redhat.com/sysadmin/cpu-components-functionality"
+   }
+  ];
+
+  const iot=[{
+    name : "arduino",
+    sor : "Arduino",
+    src : "https://www.arduino.cc/"
+   },
+   {
+    name : "raspberry pi",
+    sor : "Raspberry pi",
+    src : "https://www.raspberrypi.org/"
+   },
+   {
+    name : "embedded c",
+    sor : "javaTpoint",
+    src : "https://www.javatpoint.com/embedded-system-c-programming"
+   }
+  ];
   return (
     <>
       <div className="p-5 px-10">
@@ -21,13 +70,13 @@ function Document() {
         </div>
         <hr />
         <div className="flex flex-wrap">
-        {val.map((node)=>{
+        {soft.map((node)=>{
           return(
         <div className="my-3 mx-3 Flexx width h-64 w-64 text-center border-solid border bg-slate-800 rounded-md border-white">
-           <h1 className="text-white m-2 font-bold">Use State React-JS</h1>
-           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span> React.Dev</h2>
+           <h1 className="text-white m-2 font-bold">{node.name}</h1>
+           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span>{node.sor}</h2>
            <p className="text-white my-2 mb-5"> Click the link below to get directed to that documentation </p>
-           <Link to='https://react.dev/reference/react/useState' className="text-blue-600 font-bold">Click Here</Link>
+           <Link to={node.src} className="text-blue-600 font-bold">Click Here</Link>
         </div>
          )
         })}
@@ -41,13 +90,13 @@ function Document() {
         </div>
         <hr />
         <div className="flex flex-wrap">
-        {val.map((node)=>{
+        {hard.map((node)=>{
           return(
         <div className="my-3 mx-3  width h-64 w-64 text-center border-solid border bg-slate-800 rounded-md border-white">
-           <h1 className="text-white m-2 font-bold">Use State React-JS</h1>
-           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span> React.Dev</h2>
+           <h1 className="text-white m-2 font-bold">{node.name}</h1>
+           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span>{node.sor}</h2>
            <p className="text-white my-2 mb-5"> Click the link below to get directed to that documentation </p>
-           <Link to='https://react.dev/reference/react/useState' className="text-blue-600 font-bold">Click Here</Link>
+           <Link to={node.src} className="text-blue-600 font-bold">Click Here</Link>
         </div>
           )
         })}
@@ -61,13 +110,13 @@ function Document() {
         </div>
         <hr />
         <div className="flex flex-wrap">
-        {val.map((node)=>{
+        {iot.map((node)=>{
           return(
         <div className="my-3 mx-3 width h-64 w-64 text-center border-solid border bg-slate-800 rounded-md border-white">
-           <h1 className="text-white m-2 font-bold">Use State React-JS</h1>
-           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span> React.Dev</h2>
+           <h1 className="text-white m-2 font-bold">{node.name}</h1>
+           <h2 className="text-white mb-2"><span className="font-semibold text-white">Source : </span> {node.sor}</h2>
            <p className="text-white my-2 mb-5"> Click the link below to get directed to that documentation </p>
-           <Link to='https://react.dev/reference/react/useState' className="text-blue-600 font-bold">Click Here</Link>
+           <Link to={node.src} className="text-blue-600 font-bold">Click Here</Link>
         </div>
          )
         })}
