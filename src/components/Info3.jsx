@@ -32,7 +32,7 @@ function Info() {
     return(
        
         <div className="mx-5 mb-10 pb-64"> 
-            <div className="text-center my-5"> 
+            <div className="text-center my-5 ml-48"> 
                 <img className="rounded-3xl my-5 " src="https://www.iith.ac.in/assets/images/towers/tower2.jpg"
                  alt=""
                  />

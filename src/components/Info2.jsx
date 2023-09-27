@@ -32,8 +32,8 @@ function Info() {
     return(
        
         <div className="mx-5 mb-10 pb-64"> 
-            <div className="text-center my-5"> 
-                <img className="rounded-3xl my-5 " src="https://home.iitd.ac.in/images/gallery/gallery-1.jpg"
+            <div className="text-center my-10"> 
+                <img className="rounded-3xl my-5 ml-[500px]" src="https://home.iitd.ac.in/images/gallery/gallery-1.jpg"
                  alt=""
                  />
                  <h1 className="text-indigo-600 text-4xl my-5 text-bold">IIT DELHI</h1>

@@ -33,7 +33,7 @@ function Info() {
        
         <div className="mx-5 mb-10 pb-64"> 
             <div className="text-center my-5"> 
-                <img className="rounded-3xl my-5 " src="https://www.static-contents.youth4work.com/university/Documents/Colleges/newsEvent/6defa3f0-55ba-4361-b892-cef8273dffcb.jpg"
+                <img className="rounded-3xl my-5 ml-[540px]" src="https://www.static-contents.youth4work.com/university/Documents/Colleges/newsEvent/6defa3f0-55ba-4361-b892-cef8273dffcb.jpg"
                  alt=""
                  />
                  <h1 className="text-indigo-600 text-4xl my-5 text-bold">CMRCET</h1>
