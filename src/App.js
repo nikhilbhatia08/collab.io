@@ -21,6 +21,14 @@ import Orgreg from './components/Orgreg';
 import Qa from './components/Qa';
 import EditOwnProf from './components/EditOwnProf';
 import Info from './components/Info';
+import Info1 from './components/Info1';
+import Info2 from './components/Info2';
+import Info3 from './components/Info3';
+import Info4 from './components/Info4';
+import Info5 from './components/Info5';
+import Info6 from './components/Info6';
+import Info7 from './components/Info7';
+import Info8 from './components/Info8';
 import Footer from './components/Footer';
 import DetaulFree from './components/DetaulFree';
 import Waiting from './components/Waiting'
@@ -56,6 +64,14 @@ function App() {
         <Route path='/RgWait' element={<RgWait/>}/>
         <Route path='/orgregister' element={<Orgreg/>}/>
         <Route path='/Rankings/Info' element={<Info/>}/>
+        <Route path='/Rankings/Info1' element={<Info1/>}/>
+        <Route path='/Rankings/Info2' element={<Info2/>}/>
+        <Route path='/Rankings/Info3' element={<Info3/>}/>
+        <Route path='/Rankings/Info4' element={<Info4/>}/>
+        <Route path='/Rankings/Info5' element={<Info5/>}/>
+        <Route path='/Rankings/Info6' element={<Info6/>}/>
+        <Route path='/Rankings/Info7' element={<Info7/>}/>
+        <Route path='/Rankings/Info8' element={<Info8/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
         <Route path='/user/:userId/edit' element={<EditOwnProf/>}/>
         <Route path='/Blog/Readblog' element={<Readblog/>}/>
