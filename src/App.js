@@ -35,7 +35,7 @@ import Waiting from './components/Waiting'
 import RgWait from './components/RgWait'
 import Blog from './components/Blog';
 import Readblog from './components/Readblog';
-import PostHack from './components/PostHack';
+
 
 function App() {
   return (
@@ -71,7 +71,6 @@ function App() {
         <Route path='/Rankings/Info4' element={<Info4/>}/>
         <Route path='/Rankings/Info5' element={<Info5/>}/>
         <Route path='/Rankings/Info6' element={<Info6/>}/>
-        <Route path = '/PostHack' element={<PostHack/>}/>
         <Route path='/Rankings/Info7' element={<Info7/>}/>
         <Route path='/Rankings/Info8' element={<Info8/>}/>
         <Route path='/projects/:projectId/insights/:cId' element={<Insights/>}/>
