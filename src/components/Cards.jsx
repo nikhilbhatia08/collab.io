@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Cards({Name , category , Description}) {
+function Cards({name, title , category , Description}) {
     return (
         <article class="flex max-w-xl flex-col border p-3 rounded-md items-start justify-between">
             <div class="flex items-center gap-x-4 text-xs">
@@ -12,7 +12,7 @@ function Cards({Name , category , Description}) {
                 <h3 class="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-grey-800">
                     <a href="#">
                         <span class="absolute inset-0"></span>
-                        {Name}
+                        {title} {}
                     </a>
                 </h3>
                 <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-50 my-4">{Description}</p>
@@ -23,7 +23,7 @@ function Cards({Name , category , Description}) {
                 <div class="text-sm leading-6">
                     <p class="font-semibold text-gray-900">
                         <div className="text-white">
-                            Jenna Stones
+                            {name}
                         </div>
                     </p>
                     <p class="text-gray-50 my-2">Co-Founder / CTO</p>

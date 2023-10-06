@@ -1,17 +1,27 @@
 import React from 'react'
 import { useState } from 'react';
 import Cards from '../components/Cards';
+import axios from 'axios';
 
 function AddCards({AddCards}) {
         const[Name , setName] = useState("");
         const[Catg , setCatg] = useState("");
         const[desc , setdesc] = useState("");
+        const [details, setDetails] = useState({});
   
-        const submit = (e) => {
-            if(!Name || !Catg || !desc) {
+        const submit = async(e) => {
+            if((!Name || !Catg || !desc) && localStorage.getItem('user') === null) {
                 alert("Please fill the blanks");
             }else{
-                AddCards(Name , Catg , desc);
+                e.preventDefault();
+                const d = JSON.parse(localStorage.getItem('user'));
+                const data = {
+                    email: d.email,
+                    name: Name,
+                    category: Catg,
+                    description: desc
+                }
+                await axios.post('http://localhost:5050/GetFreelance/AddCards', data);
                 setCatg("");
                 setName("");
                 setdesc("");
@@ -24,7 +34,7 @@ function AddCards({AddCards}) {
                 <h1 class="mb-4 font-extrabold text-4xl text-white">Add Details of Your Work</h1>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                    <form>
+                    <form onSubmit={submit}>
                         <div>
                             <label class="block font-bold text-2xl text-white" for="name">Name:</label>
                             <input class="w-full shadow-inner bg-gray-100 rounded-lg placeholder-black text-2xl p-4 border-none block mt-1 w-full" value={Name} onChange={(e) => {setName(e.target.value)}} id="name" type="text" name="name" required="required" autofocus="autofocus"/>

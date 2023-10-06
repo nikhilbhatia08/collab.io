@@ -2,25 +2,43 @@ import React, { useState } from 'react'
 import Cards from '../components/Cards';
 import AddCards from '../components/AddCards';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function Getfreelance() {
- 
-  const details=[{
-    Name : "Food Delivery space",
-    category : "Web Development",
-    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-    },
-   {
-    Name : "Food Delivery space",
-    category : "Web Development",
-    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-   },
-   {
-    Name : "Food Delivery space",
-    category : "Web Development",
-    Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-  }
-]
+  const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
+  const [description, setDescription] = useState('');
+  const [details, setDetails] = useState([]);
+  useEffect(() => {
+    axios.get(`http://localhost:5050/Getfreelance`)
+    .then(res => {
+      console.log(res.data);
+      setDetails(res.data);
+      // setName(res.data.name);
+      // setCategory(res.data.category);
+      // setDescription(res.data.description);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }, [])
+//   const details=[{
+//     Name : "Food Delivery space",
+//     category : "Web Development",
+//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+//     },
+//    {
+//     Name : "Food Delivery space",
+//     category : "Web Development",
+//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+//    },
+//    {
+//     Name : "Food Delivery space",
+//     category : "Web Development",
+//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
+//   }
+// ]
   return (
     <div class="bg-slate-750 py-10 sm:py-12">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -37,11 +55,11 @@ function Getfreelance() {
 
       {/* card starts from here */}
       {/* <AddCards details={details}/> */}
-      {details.map((node)=>{
+      {details.map((item)=>{
            return(
              <>
-              <Link to='DetaulFree'>
-              <Cards Name={node.Name} category={node.category} Description={node.Description}/> 
+              <Link to={`/GetFreelance/DetaulFree/${item.id}`}>
+              <Cards id = {item.id} title = {item.title} name={item.name} category={item.category} Description={item.description}/> 
               </Link>
              </>
            )
