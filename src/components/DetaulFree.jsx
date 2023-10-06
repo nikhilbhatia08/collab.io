@@ -1,5 +1,28 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 
 function DetaulFree() {
+    const id = useParams().title;
+    const [details, setDetails] = useState({});
+    useEffect(() => {
+        console.log(id);
+        axios.get(`http://localhost:5050/GetFreelance/DetaulFree/${id}`)
+            .then(res => {
+                console.log(res.data);
+                // setDetails(res.data);
+                // setName(res.data.name);
+                // setCategory(res.data.category);
+                // setDescription(res.data.description);
+                setDetails(res.data);
+            }).catch(err => {
+                console.log(err);
+            })
+            //setDetails((res).data);
+    }, []);
     return(
          <div>
             <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
@@ -39,7 +62,7 @@ function DetaulFree() {
                     </div>
                     <div class="text-center mt-12">
                         <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                        Jenna Stones
+                        {details.name ? details.name : "Food Delivery space"}
                         </h3>
                         <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
                         <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
@@ -53,13 +76,13 @@ function DetaulFree() {
                         <div class="flex flex-wrap justify-center">
                         <div class="w-full lg:w-9/12 px-4">
                         <div class="mb-2 text-blueGray-600">
-                        <i class="mr-2 text-lg text-blueGray-400">Title : Food Delivery space</i>
+                        <i class="mr-2 text-lg text-blueGray-400">Title : {details.title}</i>
                         </div>
                         <div class="mb-2 text-blueGray-600">
-                        <i class=" mr-2 text-lg text-blueGray-400">Category : Web Development</i>
+                        <i class=" mr-2 text-lg text-blueGray-400">Category : {details.category}</i>
                         </div>
                             <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                            To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link.
+                            {details.description}
                             </p>
                             <div class="py-6 px-3 mt-32 sm:mt-0">
                             <button class="bg-violet-600 hover:bg-violet-500 active:bg-violet-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
