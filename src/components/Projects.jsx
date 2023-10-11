@@ -19,7 +19,7 @@ function Projects() {
     }, [])
   return (
     <>
-        <div className="py-12">
+        <div className="py-12 mb-64">
             <div className="mx-auto rounded-lg border bg-slate-800 max-w-5xl px-6 lg:px-8">
             <h1 className="border-b ml-1 py-4 text-white">projects</h1>
             {projects ? (projects.map((project)=>{

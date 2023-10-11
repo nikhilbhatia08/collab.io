@@ -93,7 +93,7 @@ function Getstarted() {
             </dl>
             <dd class="mt-3 text-lg leading-8 text-white">Not only can members share their creative projects within our community, but they can also sell their innovative solutions to various industries. We provide a gateway for individuals to showcase their talents and connect with potential buyers in the corporate world.
 
-                At [Your Platform Name], we believe in the power of knowledge, collaboration, and innovation. Join our community today and embark on a journey of creativity, growth, and boundless opportunities. Explore, learn, and succeed with us!</dd>
+                At Collab.io, we believe in the power of knowledge, collaboration, and innovation. Join our community today and embark on a journey of creativity, growth, and boundless opportunities. Explore, learn, and succeed with us!</dd>
           </div>
         </div>
       </div>
