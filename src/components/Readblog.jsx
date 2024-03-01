@@ -1,5 +1,21 @@
+import React, {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function Readblog() {
+    const id = useParams().id;
+    const [data, setData] = useState(null);
+    const load = async() => {
+        try{
+            const response = await axios.get(`http://localhost:5050/forum/${id}`);
+            setData(response.data);
+        }catch(err) {
+            console.log(err);
+        }
+    }
+    useEffect(() => {
+        load();
+    }, []);
     return(
         <>
           <div>
@@ -18,11 +34,9 @@ function Readblog() {
                       </div>
                   </div>
               </address>
-              <h1 class="mb-4 text-3xl font-extrabold leading-tight text-white lg:mb-6 lg:text-4xl ">Best practices for successful prototypes</h1>
+              <h1 class="mb-4 text-3xl font-extrabold leading-tight text-white lg:mb-6 lg:text-4xl ">{data.title}</h1>
           </header>
-          <p class="text-gray-50">Flowbite is an open-source library of UI components built with the utility-first
-              classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals,
-              datepickers.</p>
+          <p class="text-gray-50">{data.description}</p>
           <p class="text-gray-50">Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
               you can think things through before committing to an actual design project.</p>
           <p class="text-gray-50">But then I found a <a href="https://flowbite.com">component library based on Tailwind CSS called

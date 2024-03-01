@@ -10,12 +10,17 @@ function Qa() {
         e.preventDefault();
         const data = {
             id: nm,
-            name: name,
+            title: name,
             description: desc
         }
         try{
-            const response = await axios.post('http://localhost:5050/Qa', data);
+            const response = await axios.post(`http://localhost:5050/user/${nm}/postquery`, data);
             console.log(response);
+            if(response.status === 200) {
+                alert("Question added successfully");
+                window.location = '/Blog'
+            
+            }
         }
         catch(err){
             console.log(err);
