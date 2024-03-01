@@ -6,7 +6,6 @@ import {useState, useEffect} from 'react'
 function Navbar() {
   const us = localStorage.getItem('user');
   const user = JSON.parse(us);
-  console.log(user);
   return (
     <>
     <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">

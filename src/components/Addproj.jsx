@@ -38,10 +38,10 @@ let num = 0;  //to sepparate the duplicate items
 
 function Addproj() {
     const [title, setTitle] = useState('');
-    const [imglink, setimglink] = useState('');
+    const [imglink, setimglink] = useState();
     const [desc, setdesc] = useState('');
-    const [video, setvideo] = useState('');
-    const [arch_img, setarch_img] = useState('');
+    const [Docs, setDocs] = useState();
+    const [video, setvideo] = useState();
     const [arch_desc, setarch_desc] = useState('');
     const [insta, setinsta] = useState('');
     const [twitter, settwitter] = useState('');
@@ -50,9 +50,9 @@ function Addproj() {
     const [cont, setCont] = useState([]);
     const [open, setOpen] = useState(false);
     const [dummyCont, setdummyCont] = useState([]);
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user'))._doc;
     useEffect(() => {
-        axios.get(`http://localhost:5050/user/${user.id_p}/following`)
+        axios.get(`http://localhost:5050/user/${user.id_p}/addproj`)
             .then((res)=>{
                 setdummyCont(res.data);
                 console.log(res.data);
@@ -63,21 +63,25 @@ function Addproj() {
     }, [])
     let handleSubmit = async(e) => {
         e.preventDefault();
-        const data = {
-            title: title,
-            img: imglink,
-            description: desc,
-            video: video,
-            arch_img: arch_img,
-            arch_desc: arch_desc,
-            insta: insta,
-            twitter: twitter,
-            github: github,
-            slack: slack,
-            contributors: items,
-            sponsors: [],
-        }
-        const response = await axios.post(`http://localhost:5050/user/${user.id_p}/addproj`, data);
+        const formdata = new FormData();
+        formdata.append('title', title);
+        formdata.append('img', imglink);
+        formdata.append('description', desc);
+        formdata.append('video', video);
+        formdata.append('Docs', Docs);
+        formdata.append('arch_desc', arch_desc);
+        formdata.append('insta', insta);
+        formdata.append('twitter', twitter);
+        formdata.append('github', github);
+        formdata.append('slack', slack);
+        formdata.append('contributors', JSON.stringify(items));
+        formdata.append('sponsors', JSON.stringify([]));
+
+        console.log(Docs);
+        console.log(imglink);
+        console.log(video);
+
+        const response = await axios.post(`http://localhost:5050/user/${user.id_p}/addproj` , formdata, { headers: {'Content-Type': 'multipart/form-data'}});
         if(response.status === 200){
             alert("Project Added Successfully to waiting list");
             window.location.href = `/`;
@@ -106,20 +110,21 @@ function Addproj() {
                     <input value={imglink} onChange={(e)=>{setimglink(e.target.value)}} className="text-white mx-12" type="file" id="img" name="img" accept="image/*"/>
                 </div> */}
                 <div className="px-3 mt-4 flex felx-wrap">
-                    <h1 className="text-white text-2xl mt-3">Enter Drive Link of Project Image : </h1>
-                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={imglink} onChange={(e) => {setimglink(e.target.value)}} type="text" placeholder='Drive URL'/>
+                    <h1 className="text-white text-2xl mt-3">Upload your Project Image : </h1>
+                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" filename={imglink} accept="*" onChange={(e) => {setimglink(e.target.files[0])}} type="file" placeholder='Project Image' />
                 </div>
                 <div className="flex px-2 mt-4 h-10 flex-wrap">
                     <h1 className="text-white text-2xl items-start">Enter the description : </h1>
-                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc} onChange={(e) => {setdesc(e.target.value)}} type="text" placeholder="Description"/>
+                    <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={desc}  onChange={(e) => {setdesc(e.target.value)}} type="text" placeholder="Description"/>
                 </div>
                 <div className="px-3 mt-3 flex felx-wrap">
-                    <h1 className="text-white text-2xl">Video url :  </h1>
-                    <input className="mx-12 px-3 lg:w-[500px] flex-1 rounded-md bg-slate-200" value={video} onChange={(e) => {setvideo(e.target.value)}} type="text" placeholder='Enter Youtube video url here'/>
+                    <h1 className="text-white text-2xl">Upload Project Video :  </h1>
+                    <input className="mx-12 px-3 lg:w-[500px] flex-1 rounded-md bg-slate-200" filename={video} accept='*' onChange={(e) => {setvideo(e.target.files[0])}} type="file" placeholder='upload your project video'/>
                 </div>
                 <div className="px-3 mt-4 flex felx-wrap">
-                    <h1 className="text-white text-2xl mt-3">Enter Drive Link of Project Documentation : </h1>
-                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" value={arch_img} onChange={(e) => {setarch_img(e.target.value)}} type="text" placeholder='Drive URL'/>
+                    <h1 className="text-white text-2xl mt-3">Upload your of Project Documentation : </h1>
+                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" filename={Docs} type = "file" accept="*"
+									onChange={(e) => {setDocs((e.target.files[0]))}} placeholder='Project Documentation'/>
                 </div>
                 <div className="flex px-3 mt-4 h-10 flex-wrap">
                     <h1 className="text-white text-2xl items-start">Enter the Architecture description : </h1>
