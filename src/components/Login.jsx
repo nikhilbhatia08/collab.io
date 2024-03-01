@@ -15,6 +15,7 @@ function Login() {
         const response = await axios.post('http://localhost:5050/login', data)
         if(response.status === 200) {
             localStorage.setItem('user', JSON.stringify(response.data));
+            console.log(localStorage.getItem('user'));
             window.location = '/'
         }
         else {
