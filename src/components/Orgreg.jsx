@@ -8,16 +8,18 @@ function Orgreg(){
 	const [code , setCode] = useState('');
 	const [name , setName] = useState('');
 	const [address , setAddress] = useState('');
+	const [file , setFile] = useState();
 	let handleSubmit = async(e) => {
 		e.preventDefault();
-		const data = {
-			email: email,
-			password: password,
-			id_o: code,
-			name: name,
-			address: address
-		}
-		await axios.post('http://localhost:5050/orgregister', data)
+		const formdata = new FormData();
+		formdata.append('email', email);
+		formdata.append('password', password);
+		formdata.append('id_o', code);
+		formdata.append('name', name);
+		formdata.append('file', file);
+		formdata.append('address', address);
+		console.log(formdata)
+		await axios.post('http://localhost:5050/orgregister', formdata, { headers: {'Content-Type': 'multipart/form-data'}})
 		.then(res => {
 			if(res.status === 200) {
 				alert('Registered successfully');
@@ -105,6 +107,18 @@ function Orgreg(){
 									placeholder="Enter college code"
 									value={code}
 									onChange={(e) => {setCode(e.target.value)}}
+								/>
+							</div>
+							<div class="mb-4">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="picture">
+								Upload College Image
+								</label>
+								<input
+									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									type="file"
+									filename={file} 
+									accept="image/*"
+									onChange={(e) => {setFile((e.target.files[0]))}}
 								/>
 							</div>
 							<div class="mb-4 md:flex md:justify-between">
