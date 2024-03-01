@@ -5,7 +5,7 @@ import Slides from './Slides'
 
 function Home() {
   const us = localStorage.getItem('user');
-  const user = JSON.parse(us);
+  const user = JSON.parse(us)._doc;
   return (
     <>
 <div class="bg-slate-900">
