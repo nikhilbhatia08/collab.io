@@ -35,6 +35,7 @@ import Waiting from './components/Waiting'
 import RgWait from './components/RgWait'
 import Blog from './components/Blog';
 import Readblog from './components/Readblog';
+import AddOrgDetails from './components/AddOrgDetails';
 
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Route path='/Blog/Readblog' element={<Readblog/>}/>
         <Route path='/org/:orgId/approve' element={<Waiting/>}/>
         <Route path='/org/:orgId/approvestud' element={<RgWait/>}/>
+        <Route path='/org/:orgId/profile' element={<AddOrgDetails/>}/>
       </Routes>
       <Footer/>
     </div>
