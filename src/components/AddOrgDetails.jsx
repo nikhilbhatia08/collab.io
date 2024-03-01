@@ -16,7 +16,6 @@ function AddOrgDetails() {
             }
         }
         GetDet();
-        setDesc(1);
     } , [])
 
     const AddDetails = async() =>{
