@@ -1,9 +1,36 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 function Qa() {
+    const[name, setName] = useState("");
+    const[desc, setDesc] = useState("");
+    const [nm, setnm] = useState("");
+    const onSubmit = async(e) => {
+        e.preventDefault();
+        const data = {
+            id: nm,
+            name: name,
+            description: desc
+        }
+        try{
+            const response = await axios.post('http://localhost:5050/Qa', data);
+            console.log(response);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    const load = async() => {
+        const getname = await localStorage.getItem('user');
+        const data = JSON.parse(getname);
+        setnm(data._doc.id_p)
+    }
+    useEffect(() => {
+        load();
+    }, [])  
     return (
-        <div className="h-screen h-screen mx-10 my-10 text-white">
+        <div className="h-screen mx-10 my-10 text-white">
           <div className="text-center">
            <h1 className="font-bold text-blue-600 text-4xl">Question and Answers Forums</h1>
            </div>
@@ -15,7 +42,9 @@ function Qa() {
 				class="w-full px-3 py-3 text-xl leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
         		id="Question Name"
 				type="text"
+                value={name}
 				placeholder="Question Name"
+                onChange={(e) => {setName(e.target.value)}}
 			/>
            </div>
 
@@ -30,10 +59,12 @@ function Qa() {
         		id="Question Description"
 				type="text"
 				placeholder="Question description"
+                value={desc}
+                onChange={(e) => {setDesc(e.target.value)}}
 			/>
            </div>
            <div class="mx-96">
-                <button class="bg-blue-500 mx-96 my-5 text-white font-bold py-2 w-min px-4 w-full rounded hover:bg-blue-800">Submit</button>
+                <button class="bg-blue-500 mx-96 my-5 text-white font-bold py-2 w-min px-4 w-full rounded hover:bg-blue-800" onClick={onSubmit}>Submit</button>
             </div>
            <div className="my-3 mx-24 px-3 py-3 width h-64 w-192  border-solid border bg-slate-800 rounded-md border-white">
            <ul class="list-disc mx-4 list-inside">

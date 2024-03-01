@@ -15,6 +15,7 @@ function Getfreelance() {
     .then(res => {
       console.log(res.data);
       setDetails(res.data);
+      console.log(details)
       // setName(res.data.name);
       // setCategory(res.data.category);
       // setDescription(res.data.description);
@@ -56,10 +57,11 @@ function Getfreelance() {
       {/* card starts from here */}
       {/* <AddCards details={details}/> */}
       {details.map((item)=>{
+        //console.log(item)
            return(
              <>
-              <Link to={`/GetFreelance/DetaulFree/${item.id}`}>
-              <Cards id = {item.id} title = {item.title} name={item.name} category={item.category} Description={item.description}/> 
+              <Link to={`/GetFreelance/DetaulFree/${item._id}`}>
+              <Cards id = {item._id} title = {item.title} name={item.name} category={item.category} Description={item.description}/> 
               </Link>
              </>
            )

@@ -38,7 +38,9 @@ import Readblog from './components/Readblog';
 import AddOrgDetails from './components/AddOrgDetails';
 
 
+
 function App() {
+  console.log(localStorage.getItem('user'));
   return (
     <>
     <div className="bg-gradient-to-b from-violet-600/[.2] via-transparent bg-slate-900">
@@ -58,7 +60,7 @@ function App() {
         <Route exact path='/EditProfile' element={<EditProfile/>}/>
         <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
         <Route exact path='/project/:projectId' element={<Inproj/>}/>
-        <Route exact path='/GetFreelance/DetaulFree/:title' element={<DetaulFree/>}/>
+        <Route exact path='/GetFreelance/DetaulFree/:id' element={<DetaulFree/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/Waiting' element={<Waiting/>}/>

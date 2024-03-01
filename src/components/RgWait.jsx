@@ -92,7 +92,7 @@ function RgWait() {
                     aria-hidden
                     class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
                   ></span>
-                  <span class="relative">{node.id}</span>
+                  <span class="relative">{node.id_w}</span>
                 </span>
               </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
@@ -107,10 +107,10 @@ function RgWait() {
               <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
                 <form onSubmit={handleSubmit}>
                     <div class="mt-8">
-                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-green-400" onClick={() => {setData({approve: true}); setu_id(node.id)}} type='submit'>Accept</button>
+                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-green-400" onClick={() => {setData({approve: true}); setu_id(node.id_w)}} type='submit'>Accept</button>
                     </div>
                     <div class="mt-8">
-                        <button class="bg-red-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-red-400" onClick={() => {setData({approve: false}); setu_id(node.id)}} type='submit'>Reject</button>
+                        <button class="bg-red-500 text-white font-bold py-2 px-4 w-48 rounded hover:bg-red-400" onClick={() => {setData({approve: false}); setu_id(node.id_w)}} type='submit'>Reject</button>
                     </div>
                 </form>    
               </td>
