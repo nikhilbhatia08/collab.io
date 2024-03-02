@@ -24,7 +24,7 @@ function Waiting() {
   const [link, setlink] = useState('');
   const [approve, setApprove] = useState({});
   const id = useParams().orgId;
-  const [approve, setApprove] = useState({});
+  //const [approve, setApprove] = useState({});
   let handleSubmit = async(e) => {
     //e.preventDefault();
     console.log(approve);
@@ -44,17 +44,7 @@ function Waiting() {
       console.log(err);
     })
   }
-  const [approve, setApprove] = useState({});
-  useEffect(() => {
-    axios.get(`http://localhost:5050/org/${id}/wlistp`)
-    .then(res => {
-      console.log(res.data);
-      setDet(res.data);
-    })
-    .catch(err => {
-      console.log(err);
-    })    
-  }
+  //const [approve, setApprove] = useState({});
   useEffect(() => {
     load();
   }, [])
