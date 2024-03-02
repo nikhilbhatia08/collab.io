@@ -16,8 +16,7 @@ function Register() {
 			password: password,
 			org: org,
 			rollno: rollno,
-			first_name: firstName,
-			last_name: lastName
+			name: firstName + lastName
 		}
 		await axios.post('http://localhost:5050/register', data)
 		.then(res => {

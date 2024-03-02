@@ -23,8 +23,9 @@ function Waiting() {
   const [det, setDet] = useState([]);
   const [link, setlink] = useState('');
   const id = useParams().orgId;
+  const [approve, setApprove] = useState({});
   let handleSubmit = async(e) => {
-    e.preventDefault();
+    //e.preventDefault();
     console.log(approve);
     await axios.post(`http://localhost:5050/org/${id}/${link}/approve`, approve)
     .then(res => {
@@ -41,9 +42,8 @@ function Waiting() {
       console.log(err);
     })
   }
-  const [approve, setApprove] = useState({});
-  useEffect(() => {
-    axios.get(`http://localhost:5050/org/${id}/wlistp`)
+  const load = async() => {
+    await axios.get(`http://localhost:5050/org/${id}/wlistp`)
     .then(res => {
       console.log(res.data);
       setDet(res.data);
@@ -51,6 +51,9 @@ function Waiting() {
     .catch(err => {
       console.log(err);
     })    
+  }
+  useEffect(() => {
+    load();
   }, [])
   return(
     <div className="m-10 mb-20">
@@ -91,6 +94,7 @@ function Waiting() {
           </thead>
           <tbody>
             {det.map((node)=>{
+              //console.log(node.id)
                 return(
             <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">

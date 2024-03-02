@@ -17,6 +17,8 @@ function Readblog() {
         load();
     }, []);
     return(
+        
+            data !== null ? 
         <>
           <div>
 
@@ -37,161 +39,6 @@ function Readblog() {
               <h1 class="mb-4 text-3xl font-extrabold leading-tight text-white lg:mb-6 lg:text-4xl ">{data.title}</h1>
           </header>
           <p class="text-gray-50">{data.description}</p>
-          <p class="text-gray-50">Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
-              you can think things through before committing to an actual design project.</p>
-          <p class="text-gray-50">But then I found a <a href="https://flowbite.com">component library based on Tailwind CSS called
-                  Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation
-              bars, cards, form elements, and more which are conveniently built with the utility classes from
-              Tailwind CSS.</p>
-          <figure><img src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-1.png" alt=""/>
-              <figcaption>Digital art by Anonymous</figcaption>
-          </figure>
-          <h2 class="text-gray-50">Getting started with Flowbite</h2>
-          <p class="text-gray-50">First of all you need to understand how Flowbite works. This library is not another framework.
-              Rather, it is a set of components based on Tailwind CSS that you can just copy-paste from the
-              documentation.</p>
-          <p class="text-gray-50">It also includes a JavaScript file that enables interactive components, such as modals, dropdowns,
-              and datepickers which you can optionally include into your project via CDN or NPM.</p>
-          <p class="text-gray-50">You can check out the <a href="https://flowbite.com/docs/getting-started/quickstart/">quickstart
-                  guide</a> to explore the elements by including the CDN files into your project. But if you want
-              to build a project with Flowbite I recommend you to follow the build tools steps so that you can
-              purge and minify the generated CSS.</p>
-          <p class="text-gray-50">You'll also receive a lot of useful application UI, marketing UI, and e-commerce pages that can help
-              you get started with your projects even faster. You can check out this <a
-                  href="https://flowbite.com/docs/components/tables/">comparison table</a> to better understand
-              the differences between the open-source and pro version of Flowbite.</p>
-          <h2 class="text-gray-50">When does design come in handy?</h2>
-          <p class="text-gray-50">While it might seem like extra work at a first glance, here are some key moments in which prototyping
-              will come in handy:</p>
-          <ol>
-              <li class="text-gray-50"><strong class="text-gray-50">Usability testing</strong>. Does your user know how to exit out of screens? Can they
-                  follow your intended user journey and buy something from the site you’ve designed? By running a
-                  usability test, you’ll be able to see how users will interact with your design once it’s live;
-              </li>
-              <li class="text-gray-50"><strong class="text-gray-50">Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying
-                  properly? Pass your prototype to your data protection team and they can test it for real;</li>
-              <li class="text-gray-50"><strong class="text-gray-50">Impressing a client</strong>. Prototypes can help explain or even sell your idea by
-                  providing your client with a hands-on experience;</li>
-              <li class="text-gray-50"><strong class="text-gray-50">Communicating your vision</strong>. By using an interactive medium to preview and test
-                  design elements, designers and developers can understand each other — and the project — better.
-              </li>
-          </ol>
-          <h3 class="text-gray-50">Laying the groundwork for best design</h3>
-          <p class="text-gray-50">Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
-              you can think things through before committing to an actual design project.</p>
-          <p class="text-gray-50">Let's start by including the CSS file inside the <code>head</code> tag of your HTML.</p>
-          <h3 class="text-gray-50">Understanding typography</h3>
-          <h4 class="text-gray-50">Type properties</h4>
-          <p class="text-gray-50">A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-              letters. A typeface represents shared patterns across a collection of letters.</p>
-          <h4 class="text-gray-50">Baseline</h4>
-          <p class="text-gray-50">A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-              letters. A typeface represents shared patterns across a collection of letters.</p>
-          <h4 class="text-gray-50">Measurement from the baseline</h4>
-          <p class="text-gray-50">A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-              letters. A typeface represents shared patterns across a collection of letters.</p>
-          <h3 class="text-gray-50">Type classification</h3>
-          <h4 class="text-gray-50">Serif</h4>
-          <p class="text-gray-50">A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-              Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
-              following:</p>
-          <h4 class="text-gray-50">Old-Style serifs</h4>
-          <ul>
-              <li class="text-gray-50">Low contrast between thick and thin strokes</li>
-              <li class="text-gray-50">Diagonal stress in the strokes</li>
-              <li class="text-gray-50">Slanted serifs on lower-case ascenders</li>
-          </ul><img src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-2.png" alt=""/>
-          <ol>
-              <li class="text-gray-50">Low contrast between thick and thin strokes</li>
-              <li class="text-gray-50">Diagonal stress in the strokes</li>
-              <li class="text-gray-50">Slanted serifs on lower-case ascenders</li>
-          </ol>
-          <h3 class="text-gray-50"> Laying the best for successful prototyping</h3>
-          <p class="text-gray-50">A serif is a small shape or projection that appears at the beginning:</p>
-          <blockquote>
-              <p class="text-gray-50">Flowbite is just awesome. It contains tons of predesigned components and pages starting from
-                  login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
-          </blockquote>
-          <h4 class="text-gray-50">Code example</h4>
-          <p class="text-gray-50">A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-              Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
-              following:</p>
-          <pre><code class="language-html">&lt;dl class="grid grid-cols-2 gap-8 max-w-screen-md text-gray-900 sm:grid-cols-3 "&gt;
-&lt;div class="flex flex-col justify-center items-center"&gt;
-  &lt;dt class="mb-2 text-3xl font-extrabold"&gt;73M+&lt;/dt&gt;
-  &lt;dd class="text-lg font-normal text-gray-50 "&gt;developers&lt;/dd&gt;
-&lt;/div&gt;
-&lt;div class="flex flex-col justify-center items-center"&gt;
-  &lt;dt class="mb-2 text-3xl font-extrabold"&gt;1B+&lt;/dt&gt;
-  &lt;dd class="text-lg font-normal text-gray-50 "&gt;contributors&lt;/dd&gt;
-&lt;/div&gt;
-&lt;div class="flex flex-col justify-center items-center"&gt;
-  &lt;dt class="mb-2 text-gray-50 text-3xl font-extrabold"&gt;4M+&lt;/dt&gt;
-  &lt;dd class="text-gray-50 font-normal text-gray-500 "&gt;organizations&lt;/dd&gt;
-&lt;/div&gt;
-&lt;/dl&gt;
-</code></pre>
-          <h4 class="text-gray-50">Table example</h4>
-          <p class="text-gray-50">A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-          </p>
-          <table>
-              <thead>
-                  <tr>
-                      <th class="text-gray-50">Country</th>
-                      <th class="text-gray-50">Date &amp; Time</th>
-                      <th class="text-gray-50">Amount</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td class="text-gray-50">United States</td>
-                      <td class="text-gray-50">April 21, 2021</td>
-                      <td class="text-gray-50"><strong>$2,300</strong></td>
-                  </tr>
-                  <tr>
-                      <td class="text-gray-50">Canada</td>
-                      <td class="text-gray-50">May 31, 2021</td>
-                      <td class="text-gray-50"><strong>$300</strong></td>
-                  </tr>
-                  <tr>
-                      <td class="text-gray-50">United Kingdom</td>
-                      <td class="text-gray-50">June 3, 2021</td>
-                      <td class="text-gray-50"><strong class="text-gray-50">$2,500</strong></td>
-                  </tr>
-                  <tr>
-                      <td class="text-gray-50">Australia</td>
-                      <td class="text-gray-50">June 23, 2021</td>
-                      <td class="text-gray-50"><strong class="text-gray-50">$3,543</strong></td>
-                  </tr>
-                  <tr>
-                      <td class="text-gray-50">Germany</td>
-                      <td class="text-gray-50">July 6, 2021</td>
-                      <td class="text-gray-50"><strong class="text-gray-50">$99</strong></td>
-                  </tr>
-                  <tr>
-                      <td class="text-gray-50"> France</td>
-                      <td class="text-gray-50">August 23, 2021</td>
-                      <td class="text-gray-50"><strong class="text-gray-50">$2,540</strong></td>
-                  </tr>
-              </tbody>
-          </table>
-          <h3 class="text-gray-50">Best practices for setting up your prototype</h3>
-          <p class="text-gray-50"><strong class="text-gray-50">Low fidelity or high fidelity?</strong> Fidelity refers to how close a prototype will be to
-              the real deal. If you’re simply preparing a quick visual aid for a presentation, a low-fidelity
-              prototype — like a wireframe with placeholder images and some basic text — would be more than
-              enough. But if you’re going for more intricate usability testing, a high-fidelity prototype — with
-              on-brand colors, fonts and imagery — could help get more pointed results.</p>
-          <p class="text-gray-50"><strong class="text-gray-50">Consider your user</strong>. To create an intuitive user flow, try to think as your user
-              would when interacting with your product. While you can fine-tune this during beta testing,
-              considering your user’s needs and habits early on will save you time by setting you on the right
-              path.</p>
-          <p class="text-gray-50"><strong class="text-gray-50">Start from the inside out</strong>. A nice way to both organize your tasks and create more
-              user-friendly prototypes is by building your prototypes ‘inside out’. Start by focusing on what will
-              be important to your user, like a Buy now button or an image gallery, and list each element by order
-              of priority. This way, you’ll be able to create a prototype that puts your users’ needs at the heart
-              of your design.</p>
-          <p class="text-gray-50">And there you have it! Everything you need to design and share prototypes — right in Flowbite Figma.
-          </p>
           <section class="not-format">
               <div class="flex justify-between items-center mb-6">
                   <h2 class="text-lg lg:text-2xl font-bold text-white ">Discussion (20)</h2>
@@ -274,145 +121,146 @@ function Readblog() {
                           type="button">
                             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
                                 <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                            </svg>
-                          <span class="sr-only">Comment settings</span>
-                      </button>
-                      {/* <!-- Dropdown menu --> */}
-                      <div id="dropdownComment2"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-1 text-sm text-gray-700 "
-                              aria-labelledby="dropdownMenuIconHorizontalButton">
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </footer>
-                  <p>Much appreciated! Glad you liked it ☺️</p>
-                  <div class="flex items-center mt-4 space-x-4">
-                      <button type="button"
-                          class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
-                            <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-                            </svg>
-                          Reply
-                      </button>
-                  </div>
-              </article>
-              <article class="p-6 mb-6 text-base bg-white border-t border-gray-200 ">
-                  <footer class="flex justify-between items-center mb-2">
-                      <div class="flex items-center">
-                          <p class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 "><img
-                                  class="mr-2 w-6 h-6 rounded-full"
-                                  src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-                                  alt="Bonnie Green"/>Bonnie Green</p>
-                          <p class="text-sm text-gray-600 "><time pubdate datetime="2022-03-12"
-                                  title="March 12th, 2022">Mar. 12, 2022</time></p>
-                      </div>
-                      <button id="dropdownComment3Button" data-dropdown-toggle="dropdownComment3"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 "
-                          type="button">
-                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                            </svg>
-                          <span class="sr-only">Comment settings</span>
-                      </button>
-                      {/* <!-- Dropdown menu --> */}
-                      <div id="dropdownComment3"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-1 text-sm text-gray-700 "
-                              aria-labelledby="dropdownMenuIconHorizontalButton">
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Report</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </footer>
-                  <p>The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.</p>
-                  <div class="flex items-center mt-4 space-x-4">
-                      <button type="button"
-                          class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
-                          <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                            <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-                          </svg>
-                          Reply
-                      </button>
-                  </div>
-              </article>
-              <article class="p-6 text-base bg-white border-t border-gray-200 ">
-                  <footer class="flex justify-between items-center mb-2">
-                      <div class="flex items-center">
-                          <p class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 "><img
-                                  class="mr-2 w-6 h-6 rounded-full"
-                                  src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
-                                  alt="Helene Engels"/>Helene Engels</p>
-                          <p class="text-sm text-gray-600 "><time pubdate datetime="2022-06-23"
-                                  title="June 23rd, 2022">Jun. 23, 2022</time></p>
-                      </div>
-                      <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                          type="button">
-                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                            </svg>
-                      </button>
-                      <div id="dropdownComment4"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow ">
-                          <ul class="py-1 text-sm text-gray-700 "
-                              aria-labelledby="dropdownMenuIconHorizontalButton">
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100">Edit</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
-                              </li>
-                              <li>
-                                  <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 ">Report</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </footer>
-                  <p>Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.</p>
-                  <div class="flex items-center mt-4 space-x-4">
-                      <button type="button"
-                          class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
-                          <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                            <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
-                          </svg>
-                          Reply
-                      </button>
-                  </div>
-              </article>
-          </section>
-      </article>
-  </div>
-</main>
+                                                        </svg>
+                                                      <span class="sr-only">Comment settings</span>
+                                                  </button>
+                                                  {/* <!-- Dropdown menu --> */}
+                                                  <div id="dropdownComment2"
+                                                      class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                                      <ul class="py-1 text-sm text-gray-700 "
+                                                          aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </footer>
+                                              <p>Much appreciated! Glad you liked it ☺️</p>
+                                              <div class="flex items-center mt-4 space-x-4">
+                                                  <button type="button"
+                                                      class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
+                                                        <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                                            <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                      Reply
+                                                  </button>
+                                              </div>
+                                          </article>
+                                          <article class="p-6 mb-6 text-base bg-white border-t border-gray-200 ">
+                                              <footer class="flex justify-between items-center mb-2">
+                                                  <div class="flex items-center">
+                                                      <p class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 "><img
+                                                              class="mr-2 w-6 h-6 rounded-full"
+                                                              src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                                                              alt="Bonnie Green"/>Bonnie Green</p>
+                                                      <p class="text-sm text-gray-600 "><time pubdate datetime="2022-03-12"
+                                                              title="March 12th, 2022">Mar. 12, 2022</time></p>
+                                                  </div>
+                                                  <button id="dropdownComment3Button" data-dropdown-toggle="dropdownComment3"
+                                                      class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 "
+                                                      type="button">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                                            <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                                                        </svg>
+                                                      <span class="sr-only">Comment settings</span>
+                                                  </button>
+                                                  {/* <!-- Dropdown menu --> */}
+                                                  <div id="dropdownComment3"
+                                                      class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                                      <ul class="py-1 text-sm text-gray-700 "
+                                                          aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Report</a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </footer>
+                                              <p>The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.</p>
+                                              <div class="flex items-center mt-4 space-x-4">
+                                                  <button type="button"
+                                                      class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
+                                                      <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                                        <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
+                                                      </svg>
+                                                      Reply
+                                                  </button>
+                                              </div>
+                                          </article>
+                                          <article class="p-6 text-base bg-white border-t border-gray-200 ">
+                                              <footer class="flex justify-between items-center mb-2">
+                                                  <div class="flex items-center">
+                                                      <p class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 "><img
+                                                              class="mr-2 w-6 h-6 rounded-full"
+                                                              src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                                              alt="Helene Engels"/>Helene Engels</p>
+                                                      <p class="text-sm text-gray-600 "><time pubdate datetime="2022-06-23"
+                                                              title="June 23rd, 2022">Jun. 23, 2022</time></p>
+                                                  </div>
+                                                  <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4"
+                                                      class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                      type="button">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                                            <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                                                        </svg>
+                                                  </button>
+                                                  <div id="dropdownComment4"
+                                                      class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow ">
+                                                      <ul class="py-1 text-sm text-gray-700 "
+                                                          aria-labelledby="dropdownMenuIconHorizontalButton">
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100">Edit</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Remove</a>
+                                                          </li>
+                                                          <li>
+                                                              <a href="#"
+                                                                  class="block py-2 px-4 hover:bg-gray-100 ">Report</a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </footer>
+                                              <p>Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.</p>
+                                              <div class="flex items-center mt-4 space-x-4">
+                                                  <button type="button"
+                                                      class="flex items-center font-medium text-sm text-gray-500 hover:underline ">
+                                                      <svg class="mr-1.5 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                                        <path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/>
+                                                      </svg>
+                                                      Reply
+                                                  </button>
+                                              </div>
+                                          </article>
+                                      </section>
+                                  </article>
+                              </div>
+                            </main>
 
-              
-          </div>
-        </>
-    )
-}
+                                          
+                                      </div>
+                                    </>
+                                    :<></>
+                                )
+                            }
 
 export default Readblog;
