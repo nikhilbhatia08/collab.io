@@ -31,7 +31,7 @@ function DetaulFree() {
                     <main class="profile-page">
                         <section class="relative block h-500-px">
                             <div class="absolute top-0 w-full h-full bg-center bg-cover">
-                                <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" />
+                                {/* <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" /> */}
                                 <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
                             </div>
                             <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px">
@@ -47,7 +47,7 @@ function DetaulFree() {
                                         <div class="flex flex-wrap justify-center">
                                             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                                                 <div class="relative">
-                                                    <img alt="" src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"/>
+                                                    <img alt="" src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"/>
                                                 </div>
                                             </div>
                                             <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
