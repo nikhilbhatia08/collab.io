@@ -4,22 +4,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Waiting() {
-  //   const det = [{
-  //       no : 1,
-  //       roll : "22h51a0593",
-  //       src : "#",
-  //      },
-  //      {
-  //       no : 2,
-  //       roll : "22h51a0594",
-  //       src : "#",
-  //      },
-  //      {
-  //       no : 3,
-  //       roll : "22h51a0595",
-  //       src : "#",
-  //      }
-  // ];
   const [det, setDet] = useState([]);
   const [link, setlink] = useState('');
   const [approve, setApprove] = useState({});
@@ -45,6 +29,16 @@ function Waiting() {
     })
   }
   //const [approve, setApprove] = useState({});
+  const load = async() => {
+    await axios.get(`http://localhost:5050/org/${id}/wlistp`)
+    .then(res => {
+      console.log(res.data);
+      setDet(res.data);
+    })
+    .catch(err => {
+      console.log(err);
+    })    
+  }
   useEffect(() => {
     load();
   }, [])
@@ -132,6 +126,6 @@ function Waiting() {
     </div>
     </div>
   )
-}
+          }
 
 export default Waiting;
