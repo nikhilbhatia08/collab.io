@@ -19,7 +19,7 @@ function Cards({name, title , category , Description}) {
                 <Link to='#' className='text-white' >Contact Us</Link>
             </div>
             <div class="relative mt-8 flex items-center gap-x-4">
-                <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="" class="h-10 w-10 rounded-full bg-gray-50" />
+                <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" class="h-10 w-10 rounded-full bg-gray-50" />
                 <div class="text-sm leading-6">
                     <p class="font-semibold text-gray-900">
                         <div className="text-white">

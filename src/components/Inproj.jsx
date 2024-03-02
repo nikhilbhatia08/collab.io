@@ -46,7 +46,7 @@ function Inproj(props) {
                 </div>
                 <div className="py-4 flex-col border-b">
                     <div className=""><p className="text-4xl text-white">Architecture</p></div>
-                    <div className="my-4"><img className="mx-auto self-start lg:h-96 sm:h-40 md:h-24" src={require('../pictures/picofdev.png')} alt="" /></div>
+                    {/* <div className="my-4"><img className="mx-auto self-start lg:h-96 sm:h-40 md:h-24" src={require('../pictures/picofdev.png')} alt="" /></div> */}
                     <div><p className="text-white">This will contain explaination about hte architecture and working od the project</p></div>
                 </div>
                 <div className="py-4 flex-col border-b">
