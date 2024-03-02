@@ -31,7 +31,7 @@ function DetaulFree() {
                     <main class="profile-page">
                         <section class="relative block h-500-px">
                             <div class="absolute top-0 w-full h-full bg-center bg-cover">
-                                {/* <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="" /> */}
+                            <img src="https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80" alt="" />
                                 <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
                             </div>
                             <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px">
