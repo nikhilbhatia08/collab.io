@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Cards from '../components/Cards';
 import axios from 'axios';
+import { BASE_URL } from './utils';
 
 function AddCards({AddCards}) {
         const[Name , setName] = useState("");
@@ -25,7 +26,7 @@ function AddCards({AddCards}) {
                     description: desc
                 }
                 try{
-                    const response = await axios.post('http://localhost:5050/GetFreelance/AddCards', data);
+                    const response = await axios.post(`${BASE_URL}/GetFreelance/AddCards`, data);
                     console.log(response);
                 }
                 catch(err){

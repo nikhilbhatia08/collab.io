@@ -4,6 +4,7 @@ import AddCards from '../components/AddCards';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
+import { BASE_URL } from './utils';
 
 function Getfreelance() {
   const [name, setName] = useState('');
@@ -11,35 +12,16 @@ function Getfreelance() {
   const [description, setDescription] = useState('');
   const [details, setDetails] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5050/Getfreelance`)
+    axios.get(`${BASE_URL}/Getfreelance`)
     .then(res => {
       console.log(res.data);
       setDetails(res.data);
       console.log(details)
-      // setName(res.data.name);
-      // setCategory(res.data.category);
-      // setDescription(res.data.description);
     })
     .catch(err => {
       console.log(err);
     })
   }, [])
-//   const details=[{
-//     Name : "Food Delivery space",
-//     category : "Web Development",
-//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-//     },
-//    {
-//     Name : "Food Delivery space",
-//     category : "Web Development",
-//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-//    },
-//    {
-//     Name : "Food Delivery space",
-//     category : "Web Development",
-//     Description : "To bring this project to life, I'm looking for a freelancer with expertise in web development, particularly in creating food delivery or e-commerce websites. If you're interested and available to work on this project, please contact me through following link"
-//   }
-// ]
   return (
     <div class="bg-slate-750 py-10 sm:py-12">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">

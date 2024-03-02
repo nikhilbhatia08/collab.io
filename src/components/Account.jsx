@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
+import { BASE_URL } from './utils'
 
 function Account() {
     // const num = 4;
@@ -20,7 +21,7 @@ function Account() {
     const userId = useParams().userId;
     useEffect(() => {
         //const urlparams = new URLSearchParams(window.location.search);
-        axios.get(`http://localhost:5050/user/${userId}`)
+        axios.get(`${BASE_URL}/user/${userId}`)
         .then(res => {
             console.log(res.data);
             setUser(res.data);
@@ -29,7 +30,7 @@ function Account() {
         .catch(err => {
             console.log(err);
         });
-        axios.get(`http://localhost:5050/user/${userId}/following`)
+        axios.get(`${BASE_URL}/user/${userId}/following`)
         .then(res => {
             console.log(res.data);
             setFollowing(res.data);
@@ -37,7 +38,7 @@ function Account() {
         .catch(err => {
             console.log(err);
         });
-        axios.get(`http://localhost:5050/user/${userId}/followers`)
+        axios.get(`${BASE_URL}/user/${userId}/followers`)
         .then(res => {
             console.log(res.data);
             setFollowers(res.data);

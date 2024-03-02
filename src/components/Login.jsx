@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
+import { BASE_URL } from './utils'
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ function Login() {
             email: email,
             password: password
         }
-        const response = await axios.post('http://localhost:5050/login', data)
+        const response = await axios.post(`${BASE_URL}/login`, data)
         if(response.status === 200) {
             localStorage.setItem('user', JSON.stringify(response.data));
             console.log(localStorage.getItem('user'));

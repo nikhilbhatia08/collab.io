@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import React, {useState, useEffect} from "react";
+import { BASE_URL } from "./utils";
 
 function Blog() {
     const arr=[1,2,3,4,5];
     const [array, setArray] = useState([]);
     const load = async() => {
-        await axios.get(`http://localhost:5050/forum`)
+        await axios.get(`${BASE_URL}/forum`)
         .then(res => {
             console.log(res.data);
             setArray(res.data);

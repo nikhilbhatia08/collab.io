@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import { BASE_URL } from "./utils";
 
 function Orgreg(){
 	const [email , setEmail] = useState('');
@@ -19,7 +20,7 @@ function Orgreg(){
 		formdata.append('file', file);
 		formdata.append('address', address);
 		console.log(formdata)
-		await axios.post('http://localhost:5050/orgregister', formdata, { headers: {'Content-Type': 'multipart/form-data'}})
+		await axios.post(`${BASE_URL}/orgregister`, formdata, { headers: {'Content-Type': 'multipart/form-data'}})
 		.then(res => {
 			if(res.status === 200) {
 				alert('Registered successfully');

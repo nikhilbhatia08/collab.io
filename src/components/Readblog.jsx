@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "./utils";
 
 function Readblog() {
     const id = useParams().id;
     const [data, setData] = useState(null);
     const load = async() => {
         try{
-            const response = await axios.get(`http://localhost:5050/forum/${id}`);
+            const response = await axios.get(`${BASE_URL}/forum/${id}`);
             setData(response.data);
         }catch(err) {
             console.log(err);

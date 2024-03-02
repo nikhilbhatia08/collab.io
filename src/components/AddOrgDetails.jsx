@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect , useState} from "react";
+import { BASE_URL } from "./utils";
 
 function AddOrgDetails() {
     const [desc, setDesc] = useState(0);
@@ -7,10 +8,10 @@ function AddOrgDetails() {
     const [project , setProject] = useState('');
     const [hack_p , setHack_p] = useState('');
     const [hack_w , setHack_w] = useState('');
+    const org = JSON.parse(localStorage.getItem('org'));
     useEffect(() => {
-        const org = JSON.parse(localStorage.getItem('org'));
         const GetDet = async() => {
-            const data = await axios.get('http://localhost:5050/organization/org.o_id');
+            const data = await axios.get(`${BASE_URL}/organization/${org.o_id}`);
             if(data.description.length > 0) {
                 setDesc(1);
             }
@@ -26,7 +27,7 @@ function AddOrgDetails() {
             hackathons_w : hack_w
         }
         console.log(data)
-        const res = await axios.patch('http://localhost:5050/organization//org.o_id' , data);
+        const res = await axios.patch(`${BASE_URL}/organization/${org.o_id}` , data);
                 if(res.status === 200) {
                     alert('Details added successfully');
                     window.location = '/';

@@ -3,13 +3,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { BASE_URL } from './utils'
 
 function Projects() {
     // const projects = [1,2,3,4,5];
     // const projectsId = 1;
     const [projects, setProjects] = useState([]);
     useEffect(() => {  
-       axios.get(`http://localhost:5050/projects`)
+       axios.get(`${BASE_URL}/projects`)
        .then(res => {
            setProjects(res.data);
        })

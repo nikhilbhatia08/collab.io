@@ -2,28 +2,16 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BASE_URL } from "./utils";
 
 function RgWait() {
-  //   const det = [{
-  //       no : 1,
-  //       roll : "22h51a0593",
-  //      },
-  //      {
-  //       no : 2,
-  //       roll : "22h51a0594",
-  //      },
-  //      {
-  //       no : 3,
-  //       roll : "22h51a0595",
-  //      }
-  // ];
   const [det, setDet] = useState([]);
   const id = useParams().orgId;
   const [u_id, setu_id] = useState('');
   const [data, setData] = useState({});
   let handleSubmit = async(e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:5050/org/${id}/userapproval/${u_id}`, data)
+    await axios.post(`${BASE_URL}/org/${id}/userapproval/${u_id}`, data)
     .then(res => {
       if(res.status === 200){
         alert("approved");
@@ -39,7 +27,7 @@ function RgWait() {
     })
   }
   useEffect(() => {
-    axios.get(`http://localhost:5050/org/${id}/wlistu`)
+    axios.get(`${BASE_URL}/org/${id}/wlistu`)
     .then(res => {
       console.log(res.data);
       setDet(res.data);

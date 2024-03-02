@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "./utils";
 
 function Register() {
 	const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ function Register() {
 			rollno: rollno,
 			name: firstName + lastName
 		}
-		await axios.post('http://localhost:5050/register', data)
+		await axios.post(`${BASE_URL}/register`, data)
 		.then(res => {
 			if(res.status === 200) {
 				alert('Registered successfully');

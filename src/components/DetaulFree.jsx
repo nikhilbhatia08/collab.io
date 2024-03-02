@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BASE_URL } from "./utils";
 
 
 function DetaulFree() {
     const id = useParams().id;
     const [details, setDetails] = useState(null);
     const load = async() => {
-        await axios.get(`http://localhost:5050/GetFreelance/DetaulFree/${id}`)
+        await axios.get(`${BASE_URL}/GetFreelance/DetaulFree/${id}`)
         .then(res => {
             console.log(res.data);
             setDetails(res.data);

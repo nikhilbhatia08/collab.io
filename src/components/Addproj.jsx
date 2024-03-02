@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import axios from 'axios'
+import { BASE_URL } from './utils'
 
 const customStyles = {
     content: {
@@ -16,22 +17,6 @@ const customStyles = {
       width: 400,
     },
   };
-
-// const dummyCont = [
-//     {
-//         name: "Nikhil Bhatia",
-//         id: 1,    
-//     },
-//     {
-//         name: "Vignesh",
-//         id:2,
-//     },
-//     {
-//         name: "Varun", 
-//         id: 3,
-//     }
-// ];  //this will come from the database and will contain the details of the followers of that user
- 
 let items = [];
 
 let num = 0;  //to sepparate the duplicate items
@@ -52,7 +37,7 @@ function Addproj() {
     const [dummyCont, setdummyCont] = useState([]);
     const user = JSON.parse(localStorage.getItem('user'))._doc;
     useEffect(() => {
-        axios.get(`http://localhost:5050/user/${user.id_p}/addproj`)
+        axios.get(`${BASE_URL}/user/${user.id_p}/addproj`)
             .then((res)=>{
                 setdummyCont(res.data);
                 console.log(res.data);
@@ -81,7 +66,7 @@ function Addproj() {
         console.log(imglink);
         console.log(video);
 
-        const response = await axios.post(`http://localhost:5050/user/${user.id_p}/addproj` , formdata, { headers: {'Content-Type': 'multipart/form-data'}});
+        const response = await axios.post(`${BASE_URL}/user/${user.id_p}/addproj` , formdata, { headers: {'Content-Type': 'multipart/form-data'}});
         if(response.status === 200){
             alert("Project Added Successfully to waiting list");
             window.location.href = `/`;

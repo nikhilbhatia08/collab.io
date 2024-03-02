@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { BASE_URL } from "./utils";
 
 function Waiting() {
   const [det, setDet] = useState([]);
@@ -12,7 +13,7 @@ function Waiting() {
   let handleSubmit = async(e) => {
     //e.preventDefault();
     console.log(approve);
-    await axios.post(`http://localhost:5050/org/${id}/${link}/approve`, approve)
+    await axios.post(`${BASE_URL}/org/${id}/${link}/approve`, approve)
     .then(res => {
       if(res.status === 200) {
 
@@ -30,7 +31,7 @@ function Waiting() {
   }
   //const [approve, setApprove] = useState({});
   const load = async() => {
-    await axios.get(`http://localhost:5050/org/${id}/wlistp`)
+    await axios.get(`${BASE_URL}/org/${id}/wlistp`)
     .then(res => {
       console.log(res.data);
       setDet(res.data);

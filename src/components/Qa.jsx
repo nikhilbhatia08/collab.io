@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { BASE_URL } from './utils';
 
 function Qa() {
     const[name, setName] = useState("");
@@ -14,7 +15,7 @@ function Qa() {
             description: desc
         }
         try{
-            const response = await axios.post(`http://localhost:5050/user/${nm}/postquery`, data);
+            const response = await axios.post(`${BASE_URL}/user/${nm}/postquery`, data);
             console.log(response);
             if(response.status === 200) {
                 alert("Question added successfully");
