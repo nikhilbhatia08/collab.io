@@ -22,6 +22,7 @@ function Waiting() {
   // ];
   const [det, setDet] = useState([]);
   const [link, setlink] = useState('');
+  const [approve, setApprove] = useState({});
   const id = useParams().orgId;
   const [approve, setApprove] = useState({});
   let handleSubmit = async(e) => {
@@ -30,6 +31,7 @@ function Waiting() {
     await axios.post(`http://localhost:5050/org/${id}/${link}/approve`, approve)
     .then(res => {
       if(res.status === 200) {
+
         alert('Approved');
         window.location.reload();
       }
@@ -42,8 +44,9 @@ function Waiting() {
       console.log(err);
     })
   }
-  const load = async() => {
-    await axios.get(`http://localhost:5050/org/${id}/wlistp`)
+  const [approve, setApprove] = useState({});
+  useEffect(() => {
+    axios.get(`http://localhost:5050/org/${id}/wlistp`)
     .then(res => {
       console.log(res.data);
       setDet(res.data);
