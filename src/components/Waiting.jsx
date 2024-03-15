@@ -11,10 +11,11 @@ function Waiting() {
   const id = useParams().orgId;
   //const [approve, setApprove] = useState({});
   let handleSubmit = async(e) => {
-    //e.preventDefault();
+    e.preventDefault();
     console.log(approve);
     await axios.post(`${BASE_URL}/org/${id}/${link}/approve`, approve)
     .then(res => {
+      console.log(res);
       if(res.status === 200) {
 
         alert('Approved');
@@ -111,7 +112,7 @@ function Waiting() {
               <td class="px-5 py-5 border-b border-gray-200 bg-slate-500 text-sm">
                 <form onSubmit={handleSubmit}>
                     <div class="mt-8">
-                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-800" onClick={() => {setApprove({approve: true}); setlink(node.id)}} type='submit'>Accept</button>
+                        <button class="bg-green-500 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-800" onClick={() => {console.log("Hello");setApprove({approve: true}); setlink(node.id)}} type='submit'>Accept</button>
                     </div>
                     <div class="mt-8">
                         <button class="bg-red-500 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-800" onClick={() => {setApprove({approve: false}); setlink(node.id)}} type='submit'>Regect</button>

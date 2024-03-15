@@ -108,7 +108,7 @@ function Addproj() {
                 </div>
                 <div className="px-3 mt-4 flex felx-wrap">
                     <h1 className="text-white text-2xl mt-3">Upload your of Project Documentation : </h1>
-                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" filename={Docs} type = "file" accept="*"
+                    <input className="mx-12 my-2 px-3 py-3 flex-1 lg:w-[500px] rounded-md bg-slate-200" filename={Docs} type = "file" accept= "*"
 									onChange={(e) => {setDocs((e.target.files[0]))}} placeholder='Project Documentation'/>
                 </div>
                 <div className="flex px-3 mt-4 h-10 flex-wrap">

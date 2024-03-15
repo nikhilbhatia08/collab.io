@@ -40,14 +40,20 @@ function Inproj(props) {
                 </div>
                 <div className="py-4 flex-col border-b">
                     <div className=""><h1 className="text-white sm:text-xs md:text-xs lg:text-4xl">Video</h1></div>
-                    <video width="750" height="500" autoplay >
-                    <source src={project.video_url} type="video/mp4"/>
+                    <video width="750" height="300" controls autoplay>
+                        <source src={project.video_url} type="video/mp4"/>
                     </video>
                 </div>
-                <div className="py-4 flex-col border-b">
-                    <div className=""><h1 className="text-white sm:text-xs md:text-xs lg:text-4xl">Documents</h1></div>
-                    <Link class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200" to = {project.decumentation}>Click Here</Link>
-                </div>
+                {
+                        project.decumentation ? 
+                    <div className="py-4 flex-col border-b">
+                        <div className=""><h1 className="text-white sm:text-xs md:text-xs lg:text-4xl">Documents</h1></div>
+                        <Link class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200" to = {project.decumentation}>Click Here</Link>
+                    </div>
+                    :
+                    <>
+                    </>
+                }
                 <div className="py-4 flex-col border-b">
                     <div className=""><p className="text-4xl text-white">Architecture</p></div>
                     {/* <div className="my-4"><img className="mx-auto self-start lg:h-96 sm:h-40 md:h-24" src={require('../pictures/picofdev.png')} alt="" /></div> */}
