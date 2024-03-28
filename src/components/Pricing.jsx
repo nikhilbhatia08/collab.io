@@ -214,7 +214,7 @@ function Pricing() {
 
     <div class="mt-7 text-center">
       <p class="text-xs text-gray-400">
-        Prices in USD. Taxes may apply.
+        Prices in INR. Taxes may apply.
       </p>
     </div>
   </div>
