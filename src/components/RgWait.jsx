@@ -26,8 +26,8 @@ function RgWait() {
       console.log(err);
     })
   }
-  useEffect(() => {
-    axios.get(`${BASE_URL}/org/${id}/wlistu`)
+  const handleget = async(e) => {
+    await axios.get(`${BASE_URL}/org/${id}/wlistu`)
     .then(res => {
       console.log(res.data);
       setDet(res.data);
@@ -35,6 +35,10 @@ function RgWait() {
     .catch(err => {
       console.log(err);
     })
+  
+  }
+  useEffect(() => {
+    handleget();
   }, []);
   return(
     <div className="m-10 mb-20">

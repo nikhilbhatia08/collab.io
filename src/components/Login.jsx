@@ -14,6 +14,7 @@ function Login() {
             password: password
         }
         const response = await axios.post(`${BASE_URL}/login`, data)
+            
         console.log(response.status)
         if(response.status === 200) {
             localStorage.setItem('user', JSON.stringify(response.data));
