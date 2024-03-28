@@ -21,13 +21,13 @@ function Pricing() {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         <div>
           
-          <div class="p-4 relative z-10 bg-white border rounded-xl md:p-10 dark:bg-slate-900 dark:border-gray-700">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Professional</h3>
+          <div class="p-4 relative z-10 border rounded-xl md:p-10 dark:bg-slate-900 dark:border-gray-700">
+            <h3 class="text-xl font-bold text-white">Professional</h3>
             <div class="text-sm text-gray-500">Everything a hiring team needs.</div>
 
             <div class="mt-5">
-              <span class="text-5xl font-bold text-gray-800 dark:text-gray-200">₹999</span>
-              <span class="text-lg font-bold text-gray-800 dark:text-gray-200"></span>
+              <span class="text-5xl font-bold text-white">₹999</span>
+              <span class="text-lg font-bold text-white"></span>
               <span class="ms-3 text-gray-500">INR / monthly</span>
             </div>
 
@@ -38,7 +38,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Up to 10 people
                   </span>
                 </li>
@@ -47,7 +47,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Collect data
                   </span>
                 </li>
@@ -56,7 +56,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Code extensibility
                   </span>
                 </li> */}
@@ -66,28 +66,28 @@ function Pricing() {
               
               <ul class="space-y-2 text-sm sm:text-base">
                 <li class="flex space-x-3">
-                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-gray-800">
+                  <span class="size-5 flex justify-center items-center rounded-full text-white  dark:bg-gray-800">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Custom reports
                   </span>
                 </li>
 
                 <li class="flex space-x-3">
-                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-gray-800">
+                  <span class="size-5 flex justify-center items-center rounded-full text-gray-500 dark:bg-gray-800">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Product support
                   </span>
                 </li>
 
                 <li class="flex space-x-3">
-                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-gray-800">
+                  <span class="size-5 flex justify-center items-center rounded-full text-white  dark:bg-gray-800">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Activity reporting
                   </span>
                 </li>
@@ -102,7 +102,7 @@ function Pricing() {
               </div>
 
               <div class="flex justify-end">
-                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Buy Now </button>
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:text-white disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Buy Now </button>
               </div>
             </div>
           </div>
@@ -112,13 +112,13 @@ function Pricing() {
         <div>
           
           <div class="shadow-xl shadow-gray-200 p-5 relative z-10 bg-white border rounded-xl md:p-10 dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2]">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">For Institutions</h3>
+            <h3 class="text-xl font-bold text-white">For Institutions</h3>
             <div class="text-sm text-gray-500">To showcase your best projects</div>
             <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-gray-800">Most popular</span>
 
             <div class="mt-5">
-              <span class="text-5xl font-bold text-gray-800 dark:text-gray-200">₹3999</span>
-              <span class="text-lg font-bold text-gray-800 dark:text-gray-200"></span>
+              <span class="text-5xl font-bold text-white">₹3999</span>
+              <span class="text-lg font-bold text-white"></span>
               <span class="ms-3 text-gray-500">INR / yearly</span>
             </div>
 
@@ -129,7 +129,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Up to 1000 people
                   </span>
                 </li>
@@ -138,7 +138,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Collect data
                   </span>
                 </li>
@@ -152,7 +152,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Custom reports
                   </span>
                 </li>
@@ -161,7 +161,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Product support
                   </span>
                 </li>
@@ -170,7 +170,7 @@ function Pricing() {
                   <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
                     <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
-                  <span class="text-gray-800 dark:text-gray-200">
+                  <span class="text-white">
                     Activity reporting
                   </span>
                 </li>

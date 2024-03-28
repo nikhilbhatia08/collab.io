@@ -38,7 +38,7 @@ function Home() {
     <div class="max-w-[85rem] px-4  sm:px-6 lg:px-8 lg:py-4 mx-auto">
   
   <div class="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6">
-    <h2 class="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-gray-200">Trusted by Open Source, enterprise, and more than 99,000 of you</h2>
+    <h2 class="text-xl font-semibold md:text-2xl md:leading-tight text-white">Students of our platform got placed at top companies</h2>
   </div>
   
 
@@ -138,36 +138,45 @@ function Home() {
   
   <div class="grid grid-cols-12 sm:flex sm:justify-center gap-6 sm:gap-x-12 lg:gap-x-20">
     <div class="col-span-6 text-center">
-      <h4 class="text-xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
-        250+
+      <h4 class="text-xl md:text-3xl font-semibold text-white">
+        500+
       </h4>
       <h4 class="text-sm text-gray-600 dark:text-gray-400">
-        Components
+        Students
       </h4>
     </div>
     
 
     <div class="col-span-6 text-center">
-      <h4 class="text-xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
+      <h4 class="text-xl md:text-3xl font-semibold text-white">
         160+
       </h4>
       <h4 class="text-sm text-gray-600 dark:text-gray-400">
-        Starter Pages & Examples
+        Projects
       </h4>
     </div>
     
+    <div class="col-span-6 text-center">
+      <h4 class="text-xl md:text-3xl font-semibold text-white">
+        100+
+      </h4>
+      <h4 class="text-sm text-gray-600 dark:text-gray-400">
+        Colleges
+      </h4>
+    </div>
 
     <div class="col-start-4 col-span-6 text-center">
-      <h4 class="text-xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
+      <h4 class="text-xl md:text-3xl font-semibold text-white">
         10+
       </h4>
       <h4 class="text-sm text-gray-600 dark:text-gray-400">
-        Tailwind CSS Plugins
+        Companies
       </h4>
     </div>
     
   </div>
   </div>
+  <Slides/>
   
 </div>
     <h1 classNameName=" text-gray-200 text-4xl font-bold mx-20 pb-5">Why Collab.io ?</h1>
@@ -183,11 +192,11 @@ function Home() {
 
       <div>
         <div>
-          <h3 className="block font-bold text-gray-800  text-white">Add Project</h3>
+          <h3 className="block font-bold text-white">Add Project</h3>
           <p className="text-gray-400">Gain recognition and visibility by showcasing your projects to a wide audience.</p>
         </div>
 
-        <p className="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
+        <p className="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600 ">
           Explore
           <svg className="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -206,7 +215,7 @@ function Home() {
           <p className=" text-gray-400">Click here to embark on an exhilarating journey into the realm of freelance opportunities.</p>
         </div>
 
-        <p className="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600  text-blue-500">
+        <p className="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600 ">
           <Link to='GetFreelance' >Explore</Link>
           <svg className="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1 " width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
@@ -263,7 +272,7 @@ function Home() {
       <p className="mt-3 text-gray-400">
         We help businesses bring ideas to life in the digital world, by designing and implementing the technology tools that they need to win.
       </p>
-      <p className="mt-5 inline-flex items-center gap-x-2 font-medium shadow-blue-50 text-blue-600  text-blue-500">
+      <p className="mt-5 inline-flex items-center gap-x-2 font-medium shadow-blue-50 text-blue-600  ">
         Contact sales to Explore
         <svg className="w-2.5 h-2.5 transition ease-in-out group-hover:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>

@@ -30,15 +30,6 @@ function Slides() {
   {
     src : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Netaji_Subhas_University_of_Technology.svg/800px-Netaji_Subhas_University_of_Technology.svg.png"
   },
-  {
-    src : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Netaji_Subhas_University_of_Technology.svg/800px-Netaji_Subhas_University_of_Technology.svg.png"
-  },
-  {
-    src : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Netaji_Subhas_University_of_Technology.svg/800px-Netaji_Subhas_University_of_Technology.svg.png"
-  },
-  {
-    src : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Netaji_Subhas_University_of_Technology.svg/800px-Netaji_Subhas_University_of_Technology.svg.png"
-  },
 
   ]
   const [rotated, setRotated] = useState('left');
@@ -47,12 +38,67 @@ function Slides() {
         <>
           <p className="text-white text-center font-bold underline">Our Collaborators</p>
           <div className="flex flex-wrap m-2 justify-between border rounded-md mx-10 mb-5" >
-          <marquee className="text-white flex font-bold w-fit" scrollamount="10" direction={rotated} behavior="scroll" scrolldelay="0" loop="infinite"
-            
+          <marquee className="text-white flex font-bold w-fit" scrollamount="5" direction={rotated} behavior="scroll" scrolldelay="0" loop="infinite"
+
           >
             {/* Duplicate the images */}
             {/*make this an infinte loop*/}
               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+
+{data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+               {data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))}
+
+{data.map((node, index) => (
+                <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
+              ))} {data.map((node, index) => (
                 <img key={index} className="h-24 m-2 my-5" src={node.src} alt="" />
               ))}
             {/* Render the images again for seamless looping */}
