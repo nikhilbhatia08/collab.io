@@ -9,6 +9,22 @@ function Projects() {
     // const projects = [1,2,3,4,5];
     // const projectsId = 1;
     const [projects, setProjects] = useState([]);
+    const [selectedOption, setSelectedOption] = useState('');
+    const categories = [
+        "Rasberry Pi",
+        "Arduino",
+        "IOT",
+        "RF & RFID ",
+        "Robotics",
+        "Microcontroller",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "Web Development",
+    ]
+    const handleDropdownChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
     useEffect(() => {  
        axios.get(`${BASE_URL}/projects`)
        .then(res => {
@@ -18,9 +34,48 @@ function Projects() {
               console.log(err);
          })
     }, [])
+
+    useEffect(() => {
+        if(selectedOption === "1"){
+            axios.get(`${BASE_URL}/projects`)
+            .then(res => {
+                setProjects(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        }else{
+            axios.get(`${BASE_URL}/projects/category/${selectedOption}`)
+            .then(res => {
+                setProjects(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        }
+    } , [selectedOption])
   return (
     <>
         <div className="py-12 mb-64">
+            <div className="mx-auto mb-4">
+            <h1 className='text-3xl font-bold text-white text-center '>Projects</h1>
+                <div className="flex flex-wrap items-center">
+                    <div className="ml-96">
+                        <div className="ml-96">
+                            <div className="mx-48">
+                            <select value={selectedOption} onChange={handleDropdownChange} className='mx-12 border  px-3 py-3.5  rounded-md bg-slate-800 text-white block'>
+                            <option value="1">All Categories</option>
+                                {
+                                    categories.map((category) => {
+                                        return <option value={category}>{category}</option>
+                                    })
+                                }
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="mx-auto rounded-lg border bg-slate-800 max-w-5xl px-6 lg:px-8">
             <h1 className="border-b ml-1 py-4 text-white">projects</h1>
             {projects ? (projects.map((project)=>{
@@ -34,7 +89,7 @@ function Projects() {
                             <div className="inline-block text-white mx-1">Sponsor</div>
                         </div></Link>
                     </div>
-                    <div className="my-2 text-white">Category - </div>
+                    <div className="my-2 text-white">Category - {project.category}</div>
                 </div>
                     </div>
             })): <></>}

@@ -37,6 +37,25 @@ function Addproj() {
     const [cont, setCont] = useState([]);
     const [open, setOpen] = useState(false);
     const [dummyCont, setdummyCont] = useState([]);
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const categories = [
+        "Rasberry Pi",
+        "Arduino",
+        "IOT",
+        "RF & RFID ",
+        "Robotics",
+        "Microcontroller",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "Web Development",
+    ]
+
+        const handleDropdownChange = (event) => {
+            setSelectedOption(event.target.value);
+        };
+
     const user = JSON.parse(localStorage.getItem('user'))._doc;
     useEffect(() => {
         axios.get(`${BASE_URL}/user/${user.id_p}/addproj`)
@@ -64,7 +83,7 @@ function Addproj() {
         formdata.append('slack', slack);
         formdata.append('contributors', JSON.stringify(items));
         formdata.append('sponsors', JSON.stringify([]));
-
+        formdata.append('category', selectedOption);
         console.log(Docs);
         console.log(imglink);
         console.log(video);
@@ -129,6 +148,17 @@ function Addproj() {
                 <div className="flex px-3 mt-4 h-10 flex-wrap">
                     <h1 className="text-white text-2xl items-start">Enter the Architecture description : </h1>
                     <input className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200' value={arch_desc} onChange={(e) => {setarch_desc(e.target.value)}} type="text" placeholder="Description"/>
+                </div>
+                <div className="flex px-3 mt-4 h-10 flex-wrap">
+                <h1 className="text-white text-2xl items-start mr-32 rounded-md">Choose the Category : </h1>
+                    <select value={selectedOption} onChange={handleDropdownChange} className='mx-12 flex-auto px-3 rows-3 rounded-md bg-slate-200'>
+                        <option value="">Select an option</option>
+                        {
+                            categories.map((category) => {
+                                return <option value={category}>{category}</option>
+                            })
+                        }
+                    </select>
                 </div>
                 <div className="mt-10 px-3 py-3">
                     <h1 className="border-b text-white text-2xl">Add Social media accounts</h1>
