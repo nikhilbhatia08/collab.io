@@ -14,14 +14,16 @@ function Login() {
             password: password
         }
         const response = await axios.post(`${BASE_URL}/login`, data)
+        console.log(response.status)
         if(response.status === 200) {
             localStorage.setItem('user', JSON.stringify(response.data));
             console.log(localStorage.getItem('user'));
             window.location = '/'
         }
-        else {
+        else if(response.status === 401){
             alert('Invalid credentials');
         }
+        console.log(response.status)
     }
   return (
      <>

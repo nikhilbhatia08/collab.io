@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "./utils";
+import { Audio } from "react-loader-spinner";
 
 function Waiting() {
+  const [loading, setLoading] = useState(false);
   const [det, setDet] = useState([]);
   const [link, setlink] = useState('');
   const [approve, setApprove] = useState({});
@@ -12,16 +14,19 @@ function Waiting() {
   //const [approve, setApprove] = useState({});
   let handleSubmit = async(e) => {
     e.preventDefault();
+    setLoading(true);
     console.log(approve);
     await axios.post(`${BASE_URL}/org/${id}/${link}/approve`, approve)
     .then(res => {
       console.log(res);
       if(res.status === 200) {
-
+        setLoading(false);
         alert('Approved');
+        //setLoading(false);
         window.location.reload();
       }
       else {
+        setLoading(false);
         alert('Not Approved');
         window.location.reload();
       }
@@ -45,6 +50,8 @@ function Waiting() {
     load();
   }, [])
   return(
+    <>
+    {loading ? <div className="flex justify-center items-center h-screen"><Audio type="Audio" color="#00BFFF" height={80} width={80} /></div>:
     <div className="m-10 mb-20">
      <div>
       <h2 class="text-white text-center underline font-bold leading-tight">PROJECT APPROVAL</h2>
@@ -127,6 +134,8 @@ function Waiting() {
       </div>
     </div>
     </div>
+  }
+    </>
   )
           }
 

@@ -12,9 +12,8 @@ function Inproj(props) {
     const [cont, setCont] = useState([]);
     const tech = ["Javascript", "React", "Nodejs", "Express", "MongoDB", "HTML", "CSS", "TailwindCSS"];
     const [project, setProject] = useState({});
-    useEffect(() => {
-        console.log(id);
-        const res = axios.get(`${BASE_URL}/project/${id.projectId}`)
+    const handleFetch = async() => {
+        await axios.get(`${BASE_URL}/project/${id.projectId}`)
         .then(res => {
             console.log(res.data);
             setProject(res.data);
@@ -23,6 +22,10 @@ function Inproj(props) {
         .catch(err => {
             console.log(err);
         })
+    }
+    useEffect(() => {
+        console.log(id);
+        handleFetch();
     },[]);
   return (
     <>

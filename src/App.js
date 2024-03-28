@@ -58,7 +58,7 @@ function App() {
         <Route exact path='/Document' element={<Document/>}/>
         <Route exact path='/Qa' element={<Qa/>}/>
         <Route exact path='/EditProfile' element={<EditProfile/>}/>
-        <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>
+        <Route exact path='/GetFreelance/AddCards' element={<AddCards/>}/>x
         <Route exact path='/project/:projectId' element={<Inproj/>}/>
         <Route exact path='/GetFreelance/DetaulFree/:id' element={<DetaulFree/>}/>
         <Route path='/projects/addproj/:userId' element={<Addproj/>}/>

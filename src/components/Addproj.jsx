@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import axios from 'axios'
 import { BASE_URL } from './utils'
+import { Audio } from 'react-loader-spinner'
 
 const customStyles = {
     content: {
@@ -22,6 +23,7 @@ let items = [];
 let num = 0;  //to sepparate the duplicate items
 
 function Addproj() {
+    const [loading, setLoading] = useState(false);
     const [title, setTitle] = useState('');
     const [imglink, setimglink] = useState();
     const [desc, setdesc] = useState('');
@@ -48,6 +50,7 @@ function Addproj() {
     }, [])
     let handleSubmit = async(e) => {
         e.preventDefault();
+        setLoading(true);
         const formdata = new FormData();
         formdata.append('title', title);
         formdata.append('img', imglink);
@@ -69,9 +72,11 @@ function Addproj() {
         const response = await axios.post(`${BASE_URL}/user/${user.id_p}/addproj` , formdata, { headers: {'Content-Type': 'multipart/form-data'}});
         if(response.status === 200){
             alert("Project Added Successfully to waiting list");
+            setLoading(false);
             window.location.href = `/`;
         }
         else if(response.data === 'pl'){
+            setLoading(false);
             alert("Plagiarism detected");
         }
         else {
@@ -79,6 +84,16 @@ function Addproj() {
         }
     }
   return (
+    <>
+    {loading ? <div className="flex justify-center items-center h-screen w-screen bg-black bg-opacity-50 fixed z-50">
+        <Audio
+            type="Audio"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={0}
+        />
+    </div> : <></>}
     <div className="mb-10 mt-5 ">
         <div className="mx-2">
         </div>
@@ -207,6 +222,7 @@ function Addproj() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

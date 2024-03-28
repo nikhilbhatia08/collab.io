@@ -78,9 +78,9 @@ function Account() {
                         return <div className="flex-col border bg-slate-900 rounded-md mx-4 my-4 lg:min-w-[400px] xs-min-w-[300px] sm:min-w-[300px] md:min-w-[300px]">
                         <div className="mx-3 mt-3 flex">
                             <img className="" src={require('../pictures/book.png')} alt="" />
-                            <Link to={`/projects/${user.projects[idx].id_p}`}><h1 className="text-white lg:text-2xl md:text-xl sm:text-xl hover:text-blue-500 px-2">Name of the project</h1></Link>
+                            <Link to={`/project/${item.id}`}><h1 className="text-white lg:text-2xl md:text-xl sm:text-xl hover:text-blue-500 px-2">{item.title}</h1></Link>
                         </div>
-                        <div className="mx-3 my-4 px-2"><h1 className="text-white lg:text-2xl md:text-xl sm:text-xl">Category - {user.projects[idx]}</h1></div>
+                        <div className="mx-3 my-4 px-2"><h1 className="text-white lg:text-2xl md:text-xl sm:text-xl">Category - {}</h1></div>
                     </div>
                     })}
                     
