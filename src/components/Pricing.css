@@ -1,0 +1,19 @@
+.hello {
+    --dot-bg: rgb(24, 13, 13);
+    --dot-color: rgb(129, 129, 129);
+    --dot-size: 1px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+    height: 100vh;
+}
+
+.firstdiv{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    display: flex;
+}

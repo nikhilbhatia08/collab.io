@@ -36,6 +36,7 @@ import RgWait from './components/RgWait'
 import Blog from './components/Blog';
 import Readblog from './components/Readblog';
 import AddOrgDetails from './components/AddOrgDetails';
+import Pricing from './components/Pricing';
 
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route path='/Rankings' element={<Rankings/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route exact path='/About' element={<About/>}/>
+        <Route path='/pricing' element={<Pricing/>} />
         <Route path='/user/:userId' element={<Account/>}/>
         <Route exact path='/Addproj' element={<Addproj/>}/>
         <Route exact path='/GetFreelance' element={<GetFreelance/>}/>
