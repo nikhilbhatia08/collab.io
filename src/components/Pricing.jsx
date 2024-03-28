@@ -10,8 +10,8 @@ function Pricing() {
   <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     
     <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
-      <h2 class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-gray-200">
-        Solo, agency or team? We’ve got you covered.
+      <h2 class="text-3xl lg:text-4xl text-gray-200 font-bold dark:text-gray-200">
+        Many problems? We have the solution.
       </h2>
     </div>
     
@@ -111,7 +111,7 @@ function Pricing() {
 
         <div>
           
-          <div class="shadow-xl shadow-gray-200 p-5 relative z-10 bg-white border rounded-xl md:p-10 dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2]">
+          <div class="shadow-xl  p-5 relative z-10 border rounded-xl md:p-10 bg-slate-900 border-gray-700 shadow-gray-900/[.2]">
             <h3 class="text-xl font-bold text-white">For Institutions</h3>
             <div class="text-sm text-gray-500">To showcase your best projects</div>
             <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-gray-800">Most popular</span>
